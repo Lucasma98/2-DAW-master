@@ -1,0 +1,39 @@
+body{
+    margin: 0px;
+}
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+
+    grid-template-areas: 
+    "header header header "
+    "nav sidebar extra "
+    "sidebar sidebar extra "
+    "sidebar footer footer "
+    ;
+}
+header{
+    grid-area: header;
+    background-color: red;
+}
+nav{
+    grid-area: nav;
+    background-color: burlywood;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: aqua;
+}
+.main_content{
+    grid-area: main;
+    background-color: slateblue;
+}
+.extra_content{
+    grid-area: extra;
+    background-color: yellow;
+}
+footer{
+    grid-area: footer;
+    background-color: green;
+}

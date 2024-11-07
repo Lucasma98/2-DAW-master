@@ -5,13 +5,12 @@ body{
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-
+    text-align: center;
     grid-template-areas: 
     "header header header"
     "sidebar main extra"
     "sidebar main extra"
-    "sidebar footer footer"
-    ;
+    "sidebar footer footer";
 }
 header{
     grid-area: header;
