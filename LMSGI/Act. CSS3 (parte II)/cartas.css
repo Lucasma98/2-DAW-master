@@ -1,0 +1,71 @@
+body{
+    background-color: bisque;
+}
+p{
+    margin: 10px;
+    font-size: 20px;
+}
+.borde{
+    border: 2px solid black;
+    width: 480px;
+    height: 600px;
+}
+
+.imagen{
+    position: absolute;
+    left: 30px;
+    top: 60px;
+    z-index: 1;
+}
+.imagen1{
+    
+    position: absolute;
+    left: 90px;
+    top: 120px;
+    z-index: 2;
+}
+.imagen2{
+    position: absolute;
+    left: 150px;
+    top: 180px;
+    z-index: 3;
+}
+.imagen3{
+    position: absolute;
+    left: 210px;
+    top: 240px;	
+    z-index: 4;
+}
+
+.borde2{
+    border: 2px solid black;
+    width: 480px;
+    height: 600px; 
+}
+.imagen4{
+    position: absolute;
+    left: 30px;
+    top: 700px;
+    z-index: 6;
+}
+.imagen5{
+    position: absolute;
+    left: 90px;
+    top: 760px;
+    z-index: 8;
+}
+.imagen6{
+    position: absolute;
+    left: 150px;
+    top: 820px;
+    z-index: 5;
+}
+.imagen7{
+    position: absolute;
+    left: 210px;
+    top: 880px;
+    z-index: 7;
+}
+
+
+

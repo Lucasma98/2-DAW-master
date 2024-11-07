@@ -1,0 +1,28 @@
+body{
+    margin: 0 auto;
+}
+h1{
+    text-align: center;
+}
+h3{
+    margin-left: 280px;
+}
+.datos_personales{
+    margin-left: 300px;
+    display: flex; /*para que se ponga en la misma linea*/
+}
+.imagen1{
+    width: 90px;
+    height: 80px;
+    margin-left: 300px;
+}
+hr{
+    margin-left: 250px;
+    margin-right: 250px;
+}
+ul,li{
+    margin-left: 130px;
+}
+ol{
+    list-style-type: circle;
+}

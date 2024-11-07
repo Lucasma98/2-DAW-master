@@ -1,0 +1,38 @@
+*{
+    color: green;
+}
+h1,h2,h3,h4,h5{
+    color: orange;
+    text-decoration: underline;
+    border: dashed;
+    font-family: Garamond,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+p em,strong{
+    color: violet;
+    text-decoration: underline;
+}
+li:nth-child(even){
+    background-color: yellow;
+}
+li:nth-child(odd){
+   background-color: aqua;
+}
+li:nth-last-child(1){
+    color: red;
+}
+li:nth-child(3n){
+    font-style: italic;
+}
+a[href*="https://jorgesanchez.net"]{
+    color: pink;
+    font-size: 24pt;
+}
+a[href*=".net"]{
+    color: violet;
+}
+a[title*="w3schools"]{
+    font-weight: 1000;
+}
+
+
+

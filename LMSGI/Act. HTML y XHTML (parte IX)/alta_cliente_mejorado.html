@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Uno, monopoly, ajedrez  ">
+    <meta name="description" content="Paguina sobre juegos de mesa">
+    <meta name="author" content="Lucas Martinez Zambudio">
+    <title>Board's games</title>
+    <style>
+         body {   
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        header {
+            background-color: rgb(226, 42, 42);
+            padding: 10px;
+            text-align: left;
+            font-size: 20px;
+            color: white;
+        }
+
+        nav {
+            float: left;
+            width: 20%;
+            height: 795px;
+            background-color: rgb(204, 202, 202);
+            font-size: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 40px;
+        }
+
+        nav, ul, li, a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        section {
+            float: right;
+            width: 80%;
+            height: 795px;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+        }
+
+        form {
+            display: flex;
+            margin-top: 50px;
+            flex-direction: column;
+            width: 500px; 
+        }
+
+        input, select, textarea {
+            padding: 10px;
+            border: 2px solid black;
+            margin-bottom: 10px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button {
+            background-color: rgb(226, 42, 42);
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <header>
+            <h1>Alta Cliente</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="proyecto_web.html"><b>Inicio</b></a></li>
+                <br>
+                <li><a href="quienes_somos.html"><b>Quienes somos</b></a></li>
+                <br>
+                <li><a href="nuestros_articulos.html"><b>Nuestros Artículos</b></a></li>
+                <br>
+                <li><a href="pedidos.html"><b>Pedidos</b></a></li>
+                <br>
+                <li><a href="contacto.html"><b>Contacto</b></a></li>
+            </ul>
+        </nav>
+    </div>
+    <div>
+        <section>
+            <form action="guardar_cliente.php" method="POST">
+            <div>
+                <label for="id"><b>ID del Cliente: </b>254352</label>
+                <input type="hidden" id="id" name="id">
+            </div>
+            <br>
+            <div>
+                <label for="nombre"><b>Nombre:</b></label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div>
+                <label for="apellido"><b>Apellido:</b></label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
+            <div>
+                <label for="email"><b>Correo Electrónico:</b></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="contraseña"><b>Contraseña</b></label>
+                <input type="password" id="contraseña" name="contraseña">
+                <label for="confirmar contraseña"><b>Comfirmar contraseña</b></label>
+                <input type="password" id="Confirmar contraseña" name="confirmar contraseña">
+            </div>
+            <div>
+                <label for="telefono"><b>Teléfono:</b></label>
+                <input type="number" id="telefono" name="telefono" required>
+            </div>
+            <div>
+                <label for="direccion"><b>Dirección:</b></label>
+                <input type="text" id="direccion" name="direccion"required>
+            </div>
+            <div>
+                <label for="genero"><b>Genero:</b></label>
+                <select id="genero" name="genero">
+                    <option value="vacio"></option>
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+            <div>
+                <label for="adjuntar_dni"><b>Adjuntar DNI:</b></label>
+                <input type="file" name="adjuntar_dni" id="adjuntar_dni">
+            </div>
+            <div>
+                <button type="submit">Registrar Cliente</button>
+            </div>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

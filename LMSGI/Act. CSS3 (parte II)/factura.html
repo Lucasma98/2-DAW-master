@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="factura.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="imagenes/apple.jpg" class="logo1">
+            <p>
+                Apple
+                <br>
+                CIF: 12345678-A
+                <br>
+                C/San Vicente, 12
+                <br>
+                Alicante
+                <br>
+                Comunidad Valenciana
+                <br>
+                España
+            </p>
+        <div class="factura">
+            <h1>Factura</h1>
+            <label for="numero">Numero</label>
+            <input type="number" id="numero" value="1" readonly>
+            <br>
+            <label for="fecha">Fecha</label>
+            <input type="text" id="fecha" value="30-04-2023" readonly>
+        </div>
+    </header>
+    <div class="container">
+        <div class="datos-cliente">
+            <h2>Datos del cliente</h2>
+            <table>
+                <tr>
+                    <th>Cliente: </th>
+                    <td>Adam Tovar</td>
+                    <th>CIF: </th>
+                    <td>98-3453452</td>
+                </tr>
+                <tr>
+                    <th>Direccion: </th>
+                    <td>Pennsylvania Avenue, 1423</td>
+                    <th>Provincia: </th>
+                    <td>Washington</td>
+                </tr>
+                <tr>
+                    <th>Pais: </th>
+                    <td>Estados Unidos</td>
+                </tr>
+            </table>
+        </div>
+        <div class="lineas-de-factura">
+            <h2>Lineas de factura</h2>
+            <table class="tabla2">
+                <tr>
+                    <th>Cantidad</th>
+                    <th>Articulo</th>
+                    <th>Precio</th>
+                    <th>Subtotal</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>AR001 - Iphone 14 plus pro</td>
+                    <td>1300$</td>
+                    <td>1300$</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>EA002 - Airpos pro</td>
+                    <td>250$</td>
+                    <td>500$</td>
+                </tr>
+            </table>
+            <br>
+            <table class="tabla3">
+                <tr>
+                    <td>Base imponible</td>
+                    <td>1800$</td>
+                </tr>
+                <tr>
+                    <td>Descuento</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>IVA 20%</td>
+                    <td>360</td>
+                </tr>
+                <tr>
+                    <td>Total neto</td>
+                    <td>2160$</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <form>
+            <h4>Forma de pago y Datos bancarios</h4>
+            <div class="formulario_checkbox">
+                <label for="pagoalcontado">Pago al contado</label>
+                <input type="checkbox" name="pagoalcontado" id="pagoalcontado">
+                <br>
+                <label for="pagodomiciliado">Pago domicialdo</label>
+                <input type="checkbox" name="pagodomiciliado" id="pagodomiciliado">
+                <br>
+                <label for="pagocontarjeta">Pago con tarjeta</label>
+                <input type="checkbox" name="pagocontarjeta" id="pagocontarjeta">
+            </div>
+            <div class="formularo_text">
+                <label for="entidad">Entidad: </label>
+                <input type="textbox" name="entidad"id="entidad">
+                <br>
+                <label for="ndecuenta">Nº de cuenta</label>
+                <input type="textbox" name="ndecuenta" id="ndecuenta">
+            </div>
+        </form>
+    </footer>
+
+</body>
+</html>

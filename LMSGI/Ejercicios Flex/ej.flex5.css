@@ -1,0 +1,45 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.form-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px;
+    padding: 20px;
+    border: 1px solid rgb(82, 79, 79);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.formulario {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 45%; 
+    min-width: 250px;
+}
+input{
+    padding: 10px;
+}
+select{
+    padding: 10px;
+}
+.boton {
+    display: flex;
+    flex: 1 1 100%;
+    justify-content: center;
+}
+#cuadrado{
+    background-color: green;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .form-contenedor {
+        flex-direction: column; 
+    }
+
+    .formulario {
+        flex: 1 1 100%;
+    }
+}

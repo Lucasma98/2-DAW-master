@@ -1,0 +1,44 @@
+ul {
+    margin: 0;
+    padding: 0;
+    background-color:burlywood;
+    height: 30px;
+}
+
+.botones li {
+    display: inline;
+    padding: 10px; 
+}
+
+.botones {
+    border: 1px solid black;
+}
+
+button {
+    width: 70px;  
+    margin-top: 5px;     
+    border: 1px solid black;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 200px;
+    margin-left: 105px;
+    margin-top: 10px;
+}
+
+.submenu button {
+    width: 100%;
+    text-align: left;
+}
+
+.submenu button:hover {
+    background-color: black;
+    color: white;
+}
+
+.botones li:hover .submenu {
+    display: block;
+}

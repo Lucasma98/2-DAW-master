@@ -1,0 +1,91 @@
+body{
+    border: 2px solid black;
+    height: 825px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.logo1{
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin-left: 40px;
+}
+p{
+    margin-left: 350px;
+    margin-top: 20px;
+}
+.factura{
+    margin-left: 600px;
+    margin-top: -130px;
+}
+#numero{
+    margin-left: 20px;
+    width: 100px;
+    text-align: center;
+}
+#fecha{
+    margin-left: 35px;
+    margin-top: 5px;
+    width: 100px;
+}
+.container{
+    margin-top: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.datos-cliente{
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 200px;
+}
+h2{
+    text-align: center;
+}
+#cliente{
+    width: 100px;
+}
+#CIF{
+    width: 120px;
+}
+#provincia{
+    width: 100px;
+}
+#pais{
+    width: 120px;
+}
+.lineas-de-factura{
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 250px;
+    margin-top: 20px;
+}
+td{
+    border: 1px solid black;
+}
+.tabla2{
+    border-collapse: collapse;
+    margin-left: 10px;
+    width: 800px;
+}
+.tabla3{
+    border-collapse: collapse;
+    margin-left: 610px;
+    width: 200px;
+}
+h4{
+    text-align: center;
+}
+.formulario_checkbox{
+    margin-left: 20px;
+}
+.formularo_text{
+    margin-left: 480px;
+    margin-top: -50px;
+}
+#ndecuenta{
+    margin-top: 5px;
+}
+
+
+
+

@@ -1,0 +1,27 @@
+
+body{  
+    background-image: url("imagen/360_F_290804993_I8APRz1j5HO2Mne970Lq39ICi5CaZgIh.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+} 
+li{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.italianno-regular {
+    font-family: "Italianno", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+@font-face {
+    font-family: italiana;
+    src: url(fuente/Italiana/Italiana-Regular.ttf);
+}
+h2{
+    font-family: italiana;
+}
+
+h1{
+    font-size: 75px;
+}
+
+body{background-repeat: no-repeat;}

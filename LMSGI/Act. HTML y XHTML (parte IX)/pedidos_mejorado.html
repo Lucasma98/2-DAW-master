@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Uno, monopoly, ajedrez">
+    <meta name="description" content="Página sobre juegos de mesa">
+    <meta name="author" content="Lucas Martinez Zambudio">
+    <title>Board's Games - Pedidos</title>
+    <style>
+        body {   
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        header {
+            background-color: rgb(226, 42, 42);
+            padding: 10px;
+            text-align: left;
+            font-size: 20px;
+            color: white;
+        }
+
+        nav {
+            float: left;
+            width: 20%;
+            height: 795px;
+            background-color: rgb(204, 202, 202);
+            font-size: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 40px;
+        }
+
+        nav, ul, li, a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        section {
+            float: right;
+            width: 80%;
+            height: 795px;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+        }
+
+        form {
+            display: flex;
+            margin-top: 50px;
+            flex-direction: column;
+            width: 500px; 
+        }
+
+        input, select, textarea {
+            padding: 10px;
+            border: 2px solid black;
+            margin-bottom: 20px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button {
+            background-color: rgb(226, 42, 42);
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <header>
+            <h1>Pedidos</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="proyecto_web.html"><b>Inicio</b></a></li>
+                <br>
+                <li><a href="quienes_somos.html"><b>Quienes somos</b></a></li>
+                <br>
+                <li><a href="nuestros_articulos.html"><b>Nuestros Artículos</b></a></li>
+                <br>
+                <li><a href="alta_cliente.html"><b>Alta Cliente</b></a></li>
+                <br>
+                <li><a href="contacto.html"><b>Contacto</b></a></li>
+            </ul>
+        </nav>
+    </div>
+    <div>
+        <section>
+            <form action="guardar_pedido.php" method="POST">
+            <div>
+                <label for="id"><b>ID del Cliente: </b>254352</label>
+                <input type="hidden" id="id" name="id" required>
+            </div>
+            <br>
+            <div>
+                <label for="producto"><b>Seleccionar Producto:</b></label>
+                <select id="producto" name="producto" required>
+                    <option value=""></option>
+                    <option value="uno">Uno</option>
+                    <option value="monopoly">Monopoly</option>
+                    <option value="ajedrez">Ajedrez</option>
+                    <option value="catan">Catan</option>
+                </select>
+            </div>
+            <div>
+                <label for="cantidad"><b>Cantidad:</b></label>
+                <input type="number" id="cantidad" name="cantidad" required>
+            </div>
+            <div>
+                <label for="direccion_envio"><b>Direccion de Envío:</b></label>
+                <input type="text" id="direccion_envio" name="direccion_envio" required>
+            </div>
+            <div>
+                <label for="num_tarjeta"><b>Numero de la tarjeta: </b></label>
+                <input type="text" id="num_tarjeta" name="num_tarjeta" required>
+            </div>
+            <div>
+                <label for="fech_tarjeta"><b>Fecha: </b></label>
+                <input type="month" id="fech_tarjeta" name="fech_tarjeta" required>
+            </div>
+            <div>
+                <label for="cvc_tarjeta"><b>CVC: </b></label>
+                <input type="text" id="cvc_tarjeta" name="cvc_tarjeta" required minlength="0" maxlength="3"><!--tambien podia utilizar el min y el max(pero al escribirlos me aparecio ese y creo que tiene mas sentido)-->
+            </div>
+            <div>
+                <button type="submit">Realizar Pedido</button>
+            </div>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

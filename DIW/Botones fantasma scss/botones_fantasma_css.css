@@ -1,0 +1,42 @@
+body {
+  margin: 0px;
+}
+
+.container {
+  text-align: center;
+  background-image: url("imagen/jack-o-lanterns-5674148_1920.jpg");
+  background-position: center;
+  height: 100vh;
+}
+
+.boton-fantasma {
+  display: inline-block;
+  padding: 25px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #3498db;
+  border: 2px solid black;
+  border-radius: 15px;
+  margin-top: 350px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: transparent;
+}
+
+.boton-fantasma:hover {
+  background-color: #195ead;
+  color: white;
+}
+
+@media screen and (max-width: 775px) {
+  .container {
+    background-image: url("imagen/jack-o-lanterns-mobile.jpg");
+  }
+}
+h1 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(rgb(173, 66, 173), rgb(47, 47, 216), rgb(63, 61, 61));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*# sourceMappingURL=botones_fantasma_css.css.map */

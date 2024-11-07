@@ -1,0 +1,64 @@
+header {
+    background-color: grey;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    flex: 1 100%;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    order: 2;
+    flex: 2 1 600px;
+}
+.galerias1 {
+    background-color: rgb(192, 73, 73);
+    padding: 40px;
+    text-align: center;
+    margin: 60px;
+}
+.contacto {
+    background-color: rgb(68, 68, 163);
+    flex: 1 1 300px;
+    padding: 20px;
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+#Nombre{
+    padding: 5px;
+    border-radius: 5px;
+}
+#Correo-electronico{
+    padding: 5px;
+    border-radius: 5px;
+}
+#Telefono{
+    padding: 5px;
+    border-radius: 5px;
+}
+#boton{
+    padding: 10px;
+    background-color: rgb(21, 182, 182);
+    color: white;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .gallery {
+        order: 1;
+        width: 100%;
+    }
+    .contacto {
+        order: 2;
+        width: 100%; 
+    }
+}
+
