@@ -10,7 +10,7 @@ body{
     "header header header"
     "sidebar main extra"
     "sidebar main extra"
-    "sidebar footer footer";
+    "footer footer footer";
 }
 header{
     grid-area: header;
@@ -31,4 +31,15 @@ header{
 footer{
     grid-area: footer;
     background-color: green;
+}
+@media screen and (max-width:650px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "main"
+        "extra"
+        "sidebar"
+        "footer";
+    }
 }

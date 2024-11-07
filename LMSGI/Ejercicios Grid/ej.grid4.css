@@ -3,6 +3,7 @@ body{
 }
 .container{
     height: 100vh;
+    text-align: center;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 80px 1fr;
