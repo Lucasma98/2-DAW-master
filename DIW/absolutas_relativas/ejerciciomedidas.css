@@ -1,9 +1,7 @@
-body{
+body {
     font-size: 15px;
 }
-.exterior{
-    font-weight: 15px;
-}
-#interior{
+
+#interior {
     border: solid black 2rem;
-}
+} 
