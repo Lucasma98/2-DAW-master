@@ -1,0 +1,29 @@
+@mixin gradiente {
+    font-size: 72px;
+    background: -webkit-linear-gradient(
+        map-get($colores-gradiente, color1), 
+        map-get($colores-gradiente, color2),
+        map-get($colores-gradiente, color3)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@mixin ghostify($fondo) {
+    @if $fondo == "fclaro" {
+        color: #3498db;
+        border: 2px solid greenyellow;
+        background-color: transparent;
+        &:hover {
+            background-color: lightblue;
+            color: red;
+        }
+    } @else if $fondo == "foscuro" {
+        color: white;
+        border: 2px solid green;
+        background-color: transparent;
+        &:hover {
+            background-color: #3498db;
+            color: black;
+        }
+    }
+}

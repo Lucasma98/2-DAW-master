@@ -1,5 +1,4 @@
-@import 'parcial_colores';
-@import 'parcial_estilos';
+@import '_colores';
 @import 'mixin';
 
 body{
@@ -7,7 +6,7 @@ body{
 }
 .container {
     text-align: center;
-    background-image: url("imagen/jack-o-lanterns-5674148_1920.jpg");
+    background-image: url("imagen/Hallowen.PNG");   
     background-position: center;
     height: 100vh;
 }
@@ -16,20 +15,15 @@ body{
     padding: 25px;
     font-size: 16px;
     text-decoration: none;
-    color: #3498db;
-    border: 2px solid black;
     border-radius: 15px;
     margin-top: 350px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    @include ghostify("foscuro"); // Puedes cambiar "fclaro" a "foscuro" según sea necesario
 }
-.boton-fantasma:hover {
-    background-color: #195ead;
-    color: white;
-    
-}
-@media screen and (max-width: 775px) {
+
+@media screen and (max-width: 650px) {
     .container {
-        background-image: url("imagen/jack-o-lanterns-mobile.jpg");
+        background-image: url("imagen/Hallowen.PNG");
     }
 }
 h1{

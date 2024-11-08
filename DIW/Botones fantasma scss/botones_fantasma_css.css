@@ -4,7 +4,7 @@ body {
 
 .container {
   text-align: center;
-  background-image: url("imagen/jack-o-lanterns-5674148_1920.jpg");
+  background-image: url("imagen/Hallowen.PNG");
   background-position: center;
   height: 100vh;
 }
@@ -14,27 +14,26 @@ body {
   padding: 25px;
   font-size: 16px;
   text-decoration: none;
-  color: #3498db;
-  border: 2px solid black;
   border-radius: 15px;
   margin-top: 350px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: white;
+  border: 2px solid green;
   background-color: transparent;
 }
-
 .boton-fantasma:hover {
-  background-color: #195ead;
-  color: white;
+  background-color: #3498db;
+  color: black;
 }
 
-@media screen and (max-width: 775px) {
+@media screen and (max-width: 650px) {
   .container {
-    background-image: url("imagen/jack-o-lanterns-mobile.jpg");
+    background-image: url("imagen/Hallowen.PNG");
   }
 }
 h1 {
   font-size: 72px;
-  background: -webkit-linear-gradient(rgb(173, 66, 173), rgb(47, 47, 216), rgb(63, 61, 61));
+  background: -webkit-linear-gradient(rgb(63, 61, 61), rgb(47, 47, 216), rgb(173, 66, 173));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
