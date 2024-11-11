@@ -22,12 +22,12 @@ h1{
     /* No, se basa unicamente en el tamaño de la fuente del html*/
 
 
-    /* Si, ahora el borde de la caja exterior es de 60 píxeles, ya que en la parte 1, no se especifico un tamaño de borde para la caja exterior */
+    /* Si, ahora el borde de la caja exterior es de 60 pixeles, ya que en la parte 1, no se especifico un tamaño de borde para la caja exterior */
     /* No, se basa en el tamaño de la fuente del elemento al que se aplica, en este caso, el #exterior. */
     /* No, se basa en el tamaño de la fuente del elemento al que se aplica, en este caso, el #exterior. (es como el anterior) */
 
 
 /*5*/
-    /* El tamaño en pixeles del encabezado (h1) de la caja exterior será de 60 píxeles.*/ /* 2rem *30px = 60px */
-    /* El tamaño en píxeles del encabezado (h1) de la caja interior será de 80 píxeles.*/ /* 2rem *40px = 80px */
+    /* El tamaño en pixeles del encabezado (h1) de la caja exterior sera de 60 pixeles.*/ /* 2rem *30px = 60px */
+    /* El tamaño en pixeles del encabezado (h1) de la caja interior sera de 80 pixeles.*/ /* 2rem *40px = 80px */
     /* No, uno es de 60px y el otro de 80px*/
