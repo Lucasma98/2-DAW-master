@@ -1,0 +1,33 @@
+body {
+    font-size: 15px;
+}
+
+#interior {
+    border: solid black 2rem;
+    font-size: 40px;
+} 
+p{
+    font-size: 20px;
+}
+#exterior {
+    font-size: 30px;
+    border: solid black 2em;
+}
+h1{
+    font-size: 2em;
+}
+/*4*/
+    /* No, el tamaño del borde de la caja interior sigue siendo 40 pixeles, igual que en la parte 1.*/
+    /* Si, el borde expresado en rem se basa en el tamaño de la fuente del html.*/
+    /* No, se basa unicamente en el tamaño de la fuente del html*/
+
+
+    /* Si, ahora el borde de la caja exterior es de 60 píxeles, ya que en la parte 1, no se especifico un tamaño de borde para la caja exterior */
+    /* No, se basa en el tamaño de la fuente del elemento al que se aplica, en este caso, el #exterior. */
+    /* No, se basa en el tamaño de la fuente del elemento al que se aplica, en este caso, el #exterior. (es como el anterior) */
+
+
+/*5*/
+    /* El tamaño en pixeles del encabezado (h1) de la caja exterior será de 60 píxeles.*/ /* 2rem *30px = 60px */
+    /* El tamaño en píxeles del encabezado (h1) de la caja interior será de 80 píxeles.*/ /* 2rem *40px = 80px */
+    /* No, uno es de 60px y el otro de 80px*/
