@@ -4,4 +4,18 @@ body {
 
 #interior {
     border: solid black 2rem;
+    /* 2rem * 15px = 30px */
 } 
+p{
+    font-size: 20px;
+    /* 2rem * 20px = 30px */
+    /* Sí, el resultado cambia. El borde ahora será de 40 píxeles en lugar de 30 píxeles. */
+    /* Sí, el borde expresado en rem se basa en el tamaño de la fuente del html. */
+    /* No,se basa únicamente en el tamaño de la fuente del html. */
+}
+#exterior {
+    border: solid black 2em;
+    /* No,se basa en el tamaño de la fuente del elemento al que se aplica en este caso, el body.*/
+    /* Sí, el borde expresado en em se basa en el tamaño de la fuente del body */
+    
+}
