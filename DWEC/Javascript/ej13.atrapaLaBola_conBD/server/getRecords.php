@@ -4,12 +4,12 @@ use LDAP\Result;
 
 if(isset($_GET['topn'])) {
  
-    class record{
+    class record{ 
         var $nombre;
         var $puntos;
     }
     
-    function queryRecords($limite,$conexion) {
+    function queryRecords($limite,$conexion) {//cogerlos de mysql
         $consulta = "SELECT nombre, puntos 
                     FROM records 
                     ORDER BY puntos DESC 
@@ -17,7 +17,7 @@ if(isset($_GET['topn'])) {
         $sen = $conexion->prepare($consulta);//linea de preparacion
         $sen->execute();//linea de ejecucion
         $result = [];
-        while($row = $sen->fetch(PDO::FETCH_NAMED)){
+        while($row = $sen->fetch(PDO::FETCH_NAMED)){ //te traes los datos
             $rec = new record();
             $rec->nombre = $row['nombre'];
             $rec->puntos = $row['puntos'];

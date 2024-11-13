@@ -109,20 +109,26 @@ function terminarPartida() {
     let nombre
     if ( puntos > records[records.length - 1].points ) {
         nombre = prompt("Escribe tu nombre")
-        //Consejo: comprobar que escribe algo correcto
-        //          o limitar lo que puede llegar a escribir
-        //inserto la puntuación en la tabla de records
-        records.push({
-            name: nombre,
-            points: puntos
-        })
-        //ordeno por puntos de mayor a menor
-        records.sort( (a,b) => b.points - a.points )
-        //elimino el que se ha quedado 6º en la tabla después de ordenar
-        records.pop()
-        //listar de nuevo la tabla de records con los cambios recientes
-        listarRecords()
-        //actualizo el LocalStorage
-        localStorage.setItem( "records", JSON.stringify(records) )
+        //hacer un FETCH para insertar en BD
+        fetch("server/setRecords?nombre=" + nombre + "&puntos" + puntos)
+        .then(listarRecords())
+        
+
+        //antes cuando te pedia el nombre lo guardaba en el localstorage y ahora lo quitas porque lo manda a la base de datos
+        // //Consejo: comprobar que escribe algo correcto
+        // //          o limitar lo que puede llegar a escribir
+        // //inserto la puntuación en la tabla de records
+        // records.push({
+        //     name: nombre,
+        //     points: puntos
+        // })
+        // //ordeno por puntos de mayor a menor
+        // records.sort( (a,b) => b.points - a.points )
+        // //elimino el que se ha quedado 6º en la tabla después de ordenar
+        // records.pop()
+        // //listar de nuevo la tabla de records con los cambios recientes
+        // listarRecords()
+        // //actualizo el LocalStorage
+        // localStorage.setItem( "records", JSON.stringify(records) )
     }
 }
