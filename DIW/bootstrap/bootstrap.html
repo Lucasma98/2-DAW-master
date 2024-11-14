@@ -1,13 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css\bootstrap.min.css" rel="stylesheet">
-    <title>bootstrap</title>
+    <title>Ejemplo de Grid</title>
+    <link rel="stylesheet" href="css\bootstrap.min.css">
+    <style>
+        .general-container {
+            background-color: green;
+        }
+        .container-md-lg {
+            background-color: #f1f1f1;
+            padding: 15px;
+        }
+        .col-md-6 {
+            background-color: orange;
+            margin-bottom: 10px;
+        }
+        .col-md-4, .col-md-3 {
+            background-color: purple;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hola mundo!</h1>
-    <script src="js\bootstrap.bundle.min.js"></script>
+
+<div class="container general-container">
+    <div class="row container-md-lg">
+        <div class="col-md-6 col-lg-6">
+            <div class="row">
+                <div class="col-md-6" style="height: 100px;">Columna 1</div>
+                <div class="col-md-6" style="height: 100px;">Columna 2</div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6">
+            <div class="row">
+                <div class="col-md-3" style="height: 100px;">Columna 3</div>
+                <div class="col-md-3" style="height: 100px;">Columna 4</div>
+                <div class="col-md-3" style="height: 100px;">Columna 5</div>
+                <div class="col-md-3" style="height: 100px;">Columna 6</div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

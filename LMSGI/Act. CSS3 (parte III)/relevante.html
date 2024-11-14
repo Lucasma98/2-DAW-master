@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persona Relevante</title>
+    <link id="estilo" rel="stylesheet" href="relevante1.css">
+    <script>
+        function switchStyle(sheet) {
+            document.getElementById('estilo').setAttribute('href', sheet);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Albert Einstein</h1>
+        <input type="button" id="button" value="Estilo 1" onclick="document.getElementById('estilo').href = 'relevante1.css';">
+        <input type="button" id="button" value="Estilo 2" onclick="document.getElementById('estilo').href = 'relevante2.css';">
+    </header>
+    <main>
+        <section>
+            <h2>Biografía</h2>
+            <p> Fue un físico alemán de origen judío, nacionalizado después suizo, austriaco y estadounidense. Se le considera el científico más importante, conocido y popular del siglo XX.</p>
+            <img src="imagenes/Albert_Einstein_Head.jpg" alt="Albert Einstein">
+        </section>
+        <section>
+            <h2>Logros</h2>
+            <ul>
+                <li>Teoría de la relatividad</li>
+                <li>Efecto fotoeléctrico</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Enlaces</h2>
+            <a href="https://es.wikipedia.org/wiki/Albert_Einstein" target="_blank">Wikipedia</a>
+        </section>
+        <section>
+            <h2>Bibliografia</h2>
+            <table>
+                <tr>
+                    <th>Año</th>
+                    <th>Logro</th>
+                </tr>
+                <tr>
+                    <td>1905</td>
+                    <td>Publicación de la teoria de la relatividad especial</td>
+                </tr>
+                <tr>
+                    <td>1921</td>
+                    <td>Premio Nobel de Fisica</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p> 2023 Informacion sobre Albert Einstein</p>
+    </footer>
+</body>
+</html>
