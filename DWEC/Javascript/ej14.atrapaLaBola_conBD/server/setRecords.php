@@ -2,7 +2,7 @@
 
 use LDAP\Result;
 
-if(isset($_GET['nombre'],$_GET['puntos'])) {
+if(isset($_POST['nombre'],$_POST['puntos'])) {
     
     function queryRecords($nombre,$puntos,$conexion) {
         $consulta = "INSERT INTO records (nombre, puntos)
@@ -16,7 +16,7 @@ if(isset($_GET['nombre'],$_GET['puntos'])) {
 	$pw = "";
 	$con = new PDO($server,$user,$pw,array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''));
     
-    queryRecords($_GET['nombre'],$_GET['puntos'],$con);
+    queryRecords($_POST['nombre'],$_POST['puntos'],$con);
     echo "se ha insertado en el sql correctamente";
 } else {
 	echo "No has pasado los parámetros correctos. Debes pasar 'nombre' y 'puntos'";

@@ -110,9 +110,19 @@ function terminarPartida() {
     if ( puntos > records[records.length - 1].points ) {
         nombre = prompt("Escribe tu nombre")
         //hacer un FETCH para insertar en BD
-        fetch("server/setRecords?nombre=" + nombre + "&puntos" + puntos)
-        .then(listarRecords())
+        //fetch("server/setRecords.php?nombre=" + nombre + "&puntos=" + puntos)
         
+        //Esto es otra manera de hacerlo usando ahora el POST (hace lo mismo de ingresar los nombres)
+        //Get para recuperar valores y POST para ingresar,modificar y borrar
+        if(nombre){ //el if es para que si ingresas un nombre vacio no se guarde
+            let params = new URLSearchParams("nombre=" +nombre + "&puntos=" + puntos)
+            let opciones = {
+                method: "POST",
+                body: params
+            }
+            fetch("server/setRecords.php",opciones)
+            .then(() => listarRecords())//() simplemente es por si no quieres ponerle nombre
+        }  
 
         //antes cuando te pedia el nombre lo guardaba en el localstorage y ahora lo quitas porque lo manda a la base de datos
         // //Consejo: comprobar que escribe algo correcto
