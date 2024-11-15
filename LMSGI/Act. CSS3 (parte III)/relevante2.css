@@ -1,13 +1,13 @@
 body {
     font-family: 'Times New Roman', Times, serif;
-    background-color: #333;
-    color: #f0f0f0;
+    background-color: rgb(53, 50, 50);
+    color: white;
     margin: 0;
 }
 
 header {
     background-color: rgb(116, 114, 114);
-    color: #f0f0f0;
+    color: white;
     text-align: center;
     padding: 5px;
 }
@@ -16,9 +16,8 @@ header {
     margin: 10px;
     padding: 10px;
     background-color: rgb(116, 114, 114);
-    color: #f0f0f0;
+    color: white;
     border: none;
-    cursor: pointer;
 }
 
 #button:hover {
@@ -38,8 +37,13 @@ img {
 }
 
 table {
-    width: 100%;
     border-collapse: collapse;
+    width: 1225px;
+}
+
+th {
+    background-color: rgb(116, 114, 114);
+    color: white;
 }
 
 th, td {
@@ -47,14 +51,9 @@ th, td {
     padding: 5px;
 }
 
-th {
-    background-color: rgb(116, 114, 114);
-    color: #f0f0f0;
-}
-
 footer {
     background-color: rgb(116, 114, 114);
-    color: #f0f0f0;
+    color: white;
     text-align: center;
     padding: 25px;
 }

@@ -1,7 +1,6 @@
 body {
     font-family: 'Times New Roman', Times, serif;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: white;
     margin: 0;
 }
 
@@ -37,18 +36,18 @@ img {
 }
 
 table {
-    width: 100%;
     border-collapse: collapse;
-}
-
-th, td {
-    border: 1px solid black;
-    padding: 5px;
+    width: 1225px;
 }
 
 th {
     background-color: rgb(9, 173, 9);
     color: white;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 5px;
 }
 
 footer {
