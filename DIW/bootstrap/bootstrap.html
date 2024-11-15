@@ -1,48 +1,95 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo de Grid</title>
-    <link rel="stylesheet" href="css\bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
     <style>
-        .general-container {
+        .green {
             background-color: green;
+            height: 30px;
         }
-        .container-md-lg {
-            background-color: #f1f1f1;
-            padding: 15px;
+        .red {
+            background-color: red;
+            height: 100%;
         }
-        .col-md-6 {
+        .magenta {
+            background-color: magenta;
+            height: 50px;
+        }
+        .orange {
             background-color: orange;
-            margin-bottom: 10px;
+            height: 100px;
         }
-        .col-md-4, .col-md-3 {
-            background-color: purple;
-            margin-bottom: 10px;
+        .blue {
+            background-color: blue;
+            height: 50px;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        
+        <h2 style="text-align: center;">Tamaños md y lg:</h2>
 
-<div class="container general-container">
-    <div class="row container-md-lg">
-        <div class="col-md-6 col-lg-6">
-            <div class="row">
-                <div class="col-md-6" style="height: 100px;">Columna 1</div>
-                <div class="col-md-6" style="height: 100px;">Columna 2</div>
+        <div class="row">
+            <div class="col-12 green"></div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+<!-- 
+
+        <div class="row">
+            <div class="col-2 col-lg-1 red"></div>
+
+            <div class="col-10 col-lg-11">
+                <div class="row">
+                    <div class="col-12 magenta"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6 orange"></div>
+                    <div class="col-6 orange"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-3 blue"></div>
+                    <div class="col-3 blue"></div>
+                    <div class="col-3 blue"></div>
+                    <div class="col-3 blue"></div>
+                    <div class="col-3 blue"></div>
+                    <div class="col-3 blue"></div>
+                    <div class="col-3 blue"></div>
+                    <div class="col-3 blue"></div>
+                </div>
             </div>
         </div>
 
-        <div class="col-md-6 col-lg-6">
-            <div class="row">
-                <div class="col-md-3" style="height: 100px;">Columna 3</div>
-                <div class="col-md-3" style="height: 100px;">Columna 4</div>
-                <div class="col-md-3" style="height: 100px;">Columna 5</div>
-                <div class="col-md-3" style="height: 100px;">Columna 6</div>
-            </div>
+        <div class="row">
+            <div class="col-12 green"></div>
         </div>
     </div>
-</div>
+    <br> -->
 </body>
 </html>
