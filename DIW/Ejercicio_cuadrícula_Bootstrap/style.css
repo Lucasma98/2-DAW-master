@@ -1,0 +1,27 @@
+body{
+    border: 4px solid black;
+    margin: 10px;
+    text-align: center;
+}
+header,footer{
+    background-color: green;
+    border: 2px solid black;
+}
+aside{
+    background-color: red;
+    border: 2px solid black;
+
+}
+nav{
+    background-color: blueviolet;
+    border: 2px solid black;
+   
+}
+.principal{
+    background-color: orange;
+    border: 2px solid black;
+}
+.secundario{
+    background-color: blue;
+    border: 2px solid black;
+}
