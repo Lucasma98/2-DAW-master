@@ -2,7 +2,7 @@ const ANCHURA_TABLERO = 600
 const ALTURA_TABLERO = 300
 const DIAMETRO_BOLA = 30
 const DURACION = 10
-const LIMITE = 5
+const LIMITE = 6   
 
 let records = [
         {name: "Andrew", points: 5},
@@ -11,7 +11,6 @@ let records = [
         {name: "George", points: 2},
         {name: "Caroline", points: 1}
     ]
-
 
 const btnEmpezar = document.querySelector("#btnEmpezar")
 const tablero = document.querySelector("#tablero")
@@ -79,11 +78,10 @@ bola.addEventListener("click", function(){
 
 function listarRecords() {
     cuerpoRecords.innerHTML = ""
-
-    //recuperar el array de records en la base de datos
+    //recuperar el array de records de la BD
     fetch("server/getRecords.php?topn=" + LIMITE)
-    .then( resp => resp.json())
-    .then(records => {
+    .then( resp => resp.json() )
+    .then( records => {
         records.forEach( (r,index) => {
             //crear una fila de la tabla por cada record del array records
             let newRow = cuerpoRecords.insertRow()
@@ -110,35 +108,16 @@ function terminarPartida() {
     if ( puntos > records[records.length - 1].points ) {
         nombre = prompt("Escribe tu nombre")
         //hacer un FETCH para insertar en BD
-        //fetch("server/setRecords.php?nombre=" + nombre + "&puntos=" + puntos)
         
-        //Esto es otra manera de hacerlo usando ahora el POST (hace lo mismo de ingresar los nombres)
-        //Get para recuperar valores y POST para ingresar,modificar y borrar
-        if(nombre){ //el if es para que si ingresas un nombre vacio no se guarde
-            let params = new URLSearchParams("nombre=" +nombre + "&puntos=" + puntos)
+        //fetch("server/setRecords.php?nombre=" + nombre + "&puntos=" + puntos)
+        if (nombre) {
+            let params = new URLSearchParams("nombre="+nombre+"&puntos="+puntos)
             let opciones = {
                 method: "POST",
                 body: params
             }
             fetch("server/setRecords.php",opciones)
-            .then(() => listarRecords())//() simplemente es por si no quieres ponerle nombre
-        }  
-
-        //antes cuando te pedia el nombre lo guardaba en el localstorage y ahora lo quitas porque lo manda a la base de datos
-        // //Consejo: comprobar que escribe algo correcto
-        // //          o limitar lo que puede llegar a escribir
-        // //inserto la puntuación en la tabla de records
-        // records.push({
-        //     name: nombre,
-        //     points: puntos
-        // })
-        // //ordeno por puntos de mayor a menor
-        // records.sort( (a,b) => b.points - a.points )
-        // //elimino el que se ha quedado 6º en la tabla después de ordenar
-        // records.pop()
-        // //listar de nuevo la tabla de records con los cambios recientes
-        // listarRecords()
-        // //actualizo el LocalStorage
-        // localStorage.setItem( "records", JSON.stringify(records) )
+            .then( () => listarRecords() )
+        }
     }
 }
