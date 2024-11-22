@@ -1,1 +1,52 @@
-    
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rss version="2.0">
+    <channel>
+        <title>Noticias del Mundo Digital</title>
+        <link>https://www.noticiasdigital.com</link>
+        
+        <description>Actualizaciones y noticias sobre tecnología, gadgets y software.</description>
+        <language>es-ES</language>
+        <pubDate>Fri, 22 Nov 2024 12:00:00 GMT</pubDate>
+        
+ 
+        <item>
+            <title>Lanzamiento del nuevo iPhone 15</title>
+            <link>https://www.noticiasdigital.com/iphone-15</link>
+            <description>Apple ha presentado oficialmente el iPhone 15 con innovaciones sorprendentes.</description>
+            <author>redaccion@noticiasdigital.com</author>
+            <pubDate>Thu, 21 Nov 2024 10:00:00 GMT</pubDate>
+        </item>
+ 
+        <item>
+            <title>10 consejos para proteger tu privacidad en línea</title>
+            <link>https://www.noticiasdigital.com/privacidad-en-linea</link>
+            <description>Descubre cómo mantener tus datos personales seguros en internet.</description>
+            <author>seguridad@noticiasdigital.com</author>
+            <pubDate>Wed, 20 Nov 2024 15:30:00 GMT</pubDate>
+        </item>
+ 
+        <item>
+            <title>Los mejores portatiles para estudiantes en 2024</title>
+            <link>https://www.noticiasdigital.com/mejores-portatiles-estudiantes</link>
+            <description>Analizamos los modelos más recomendados para estudiantes este año.</description>
+            <author>analisis@noticiasdigital.com</author>
+            <pubDate>Tue, 19 Nov 2024 08:00:00 GMT</pubDate>
+        </item>
+
+        <item>
+            <title>¿Qué es la inteligencia artificial?</title>
+            <link>https://www.noticiasdigital.com/ia</link>
+            <description>Una guía completa sobre cómo funciona la inteligencia artificial y sus aplicaciones.</description>
+            <author>tecnologia@noticiasdigital.com</author>
+            <pubDate>Mon, 18 Nov 2024 12:00:00 GMT</pubDate>
+        </item>
+
+        <item>
+            <title>Top 5 aplicaciones para aprender a programar</title>
+            <link>https://www.noticiasdigital.com/aplicaciones-programar</link>
+            <description>Explora las mejores apps para aprender a programar desde cero.</description>
+            <author>educacion@noticiasdigital.com</author>
+            <pubDate>Sun, 17 Nov 2024 09:45:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
