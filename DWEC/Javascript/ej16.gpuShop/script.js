@@ -48,7 +48,7 @@ function listarRecords(patron) {
 function añadirSeleccionado(id){
     let tarjeta = recu_productos.find(p => p.id == id)
     
-    console.table(tarjeta)
+    console.table(tarjeta)//te lo muestre en el F12
 
     let newRow = tableSeleccionados.insertRow()
     let newCell1 = newRow.insertCell()
@@ -61,4 +61,3 @@ function añadirSeleccionado(id){
 function BorrarCarrito(){
     tableSeleccionados.innerHTML = ""
 }
-    
