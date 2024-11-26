@@ -1,6 +1,93 @@
-.home {
-  width: 100px;
-  height: 100px;
+@charset "UTF-8";
+@import url("css/bootstrap.min.css");
+/* Variables de color */
+/* Fondo oscuro */
+/* Blanco para texto claro */
+/* Gris oscuro para texto oscuro */
+/* Amarillo brillante para el botón claro */
+/* Índigo oscuro para el botón oscuro */
+/* Color vibrante para la sección */
+/* Estilos globales */
+body {
+  background-color: rgb(40, 44, 52);
+  font-family: "Arial", sans-serif;
+  height: 100vh;
+}
+
+body.claro {
+  color: rgb(255, 255, 255); /* Color claro para el texto */
+}
+
+body.oscuro {
+  color: rgb(51, 51, 51); /* Color oscuro para el texto */
+}
+
+.icono-img {
+  width: 80px; /* Tamaño del icono */
+  height: 80px; /* Tamaño del icono */
+}
+
+.foto {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid rgb(255, 204, 0); /* Bordes alrededor de la foto */
+}
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.presentacion-titulo {
+  font-size: 60px;
+  color: rgb(255, 204, 0); /* Usamos el color brillante para el título */
+}
+
+.presentacion-subtitulo {
+  font-size: 50px;
+}
+
+.nav-link {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 204, 0); /* Botones de navegación */
+  text-decoration: none;
+}
+
+.btn-light {
+  background-color: rgb(255, 204, 0);
+  color: rgb(40, 44, 52);
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-dark {
+  background-color: rgb(75, 0, 130);
+  color: rgb(40, 44, 52);
+  border: none;
+  border-radius: 5px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.mis_proyectos {
+  padding: 10px;
+  border-radius: 8px;
+  margin-left: 210px;
+}
+
+.sobre_mi {
+  padding: 10px;
+  border-radius: 8px;
+  margin-left: 740px;
+  margin-top: -200px;
 }
 
 /*# sourceMappingURL=style.css.map */

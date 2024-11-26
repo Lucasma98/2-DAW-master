@@ -1,31 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" media="all" href="fondo.css">
-    <title>Porfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Presentación</title>
+  <!-- Archivo local de Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Archivo de estilos personalizados -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Fondo del portafolio -->
+  <link rel="stylesheet" media="all" href="fondo.css" />
 </head>
-<body>
-    <header>    
-    <div class="context">
-        <img src="imagenes/home.png" alt="Home" class="home">
+<div class="context">
+  </div>
+
+  <!-- Fondo y círculos animados -->
+  <div class="area">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  
+    <body class="btn-dark">
+    <div class="container py-5">
+
+        <header class="d-flex justify-content-between align-items-center mb-4">
+        <div class="icono">
+            <img src="imagenes/home.png" alt="Icono" class="icono-img">
+        </div>
+        <div class="boton">
+            <button class="btn btn-light me-2">Claro</button>
+            <button class="btn btn-dark">Oscuro</button>
+        </div>
+
+        <div class="foto">
+            <img src="imagenes/Lucas.jpeg" alt="Foto de presentación" class="img-fluid">
+        </div>
+        </header>
+
+        <section class="text-center mb-4">
+        <h1 class="presentacion-titulo">Presentación</h1>
+        <p class="presentacion-subtitulo">Mis estudios</p>
+        </section>
+        <div>
+            <div>
+            </div><nav class="d-flex justify-content-around mb-4">
+            <a href="#proyectos" class="nav-link">Mis proyectos</a>
+            <a href="#sobre-mi" class="nav-link">Más sobre mí</a>
+            </div>
+            <ul class="btn btn-light mis_proyectos">
+                <li><a href="#">Proyecto 1</a></li>
+                <br>
+                <li><a href="#">Proyecto 2</a></li>
+                <br>
+                <li><a href="#">Proyecto 3</a></li>
+            </ul>
+            <a href="imagenes/Curriculum.pdf" class="btn btn-light sobre_mi" download>Descargar Currículum (PDF)</a>
+        </div>
+
+        </nav>
     </div>
-        <div class="area" >
-                    <ul class="circles">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                    </ul>
-            </div >
-    </header>
+</div>
 </body>
 </html>
