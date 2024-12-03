@@ -61,3 +61,12 @@ function añadirSeleccionado(id){
 function BorrarCarrito(){
     tableSeleccionados.innerHTML = ""
 }
+
+//dos formas de recuperarlo del html
+//Acceder a th precio para subrayarlo o lo que quieras
+const celdaPrecio = document.querySelector("#tableResultados>thead>tr>th:nth-child(1)")
+// const celdaPrecio = document.querySelector("#tableResultados>thead>tr>th")[1]
+celdaPrecio.addEventListener("click",function(){
+    this.classList.toggle("amarillo")//lo metemos en la clase amarillo que es un style del css
+    //Funcion del toggle: si el objeto tiene la clase amarillo, se la quita y si el objeto no tiene la clase amarillo, se la pone
+}) //toggle y replace
