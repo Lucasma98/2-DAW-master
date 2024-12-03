@@ -1,0 +1,14 @@
+.escribir {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: escribir 3s forwards;
+}
+
+@keyframes escribir {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}

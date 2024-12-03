@@ -1,0 +1,12 @@
+.texto_deslizante{
+    animation: deslizar 5s linear infinite;
+}
+
+@keyframes deslizar {
+    0% {
+        transform: translateX(-200px);
+    }
+    100% {
+        transform: translateX(200px);
+    }
+}

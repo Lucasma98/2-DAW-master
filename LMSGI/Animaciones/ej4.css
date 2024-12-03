@@ -1,0 +1,22 @@
+.cambiar_color_boton{
+    width: 150px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    animation: background-color 0.5s forwards;
+}
+
+@keyframes cambiar_Color{
+    from{
+        background-color: blue;
+    }
+    to{
+        background-color: green;
+    }
+}
+
+.cambiar_color_boton:hover {
+    animation-name: cambiar_Color;
+}

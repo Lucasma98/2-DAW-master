@@ -1,0 +1,22 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 300px;
+}
+.circulo {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50px;
+    animation: rebote 1.5s;
+    animation-iteration-count: infinite
+}
+
+@keyframes rebote {
+    0%,100% {
+        transform: translateY(100px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+}

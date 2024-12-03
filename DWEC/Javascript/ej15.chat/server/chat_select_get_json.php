@@ -1,5 +1,5 @@
 <?php
-if(isset($_GET['ultimo'])) {
+if(isset($_GET['ultimo'])) { // si hay dos parametros como if(isset($_GET['ultimo'])) if(isset($_GET['hola']))
 
     class mensaje {
         var $id;

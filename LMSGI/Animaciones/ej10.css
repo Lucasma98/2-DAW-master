@@ -1,0 +1,22 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 300px;
+}
+.boton {
+    width: 120px;
+    height: 50px;
+    background-color: green;
+    color: white;
+    animation: parpadeo 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes parpadeo {
+    0%,100% {
+        background-color: green;
+    }
+    50% {
+        background-color: red;
+    }
+}

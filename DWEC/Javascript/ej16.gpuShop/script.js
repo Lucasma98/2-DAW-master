@@ -7,6 +7,14 @@ const inputBorrarTodos = document.querySelector("#inputBorrarTodos")
 listarRecords("")//ponemos las "" para que si no pone ninguna letra en el buscador las muestre todas
 
 
+//let cart = [] //si haces lo de comprobar si hay localstorage tienes que quitar los []
+
+// if(esta el carrito en LS) cart = JSON.parse(localStorage.getItem("cart"))
+// else cart = [] // esto es para preguntar si hay algo en el local storage y lo muestre
+
+// showcart//y esto es para que si hay que te lo muestre
+
+
 buscador.addEventListener("keyup",function(){
     listarRecords(buscador.value.trim())
 })
@@ -61,3 +69,12 @@ function añadirSeleccionado(id){
 function BorrarCarrito(){
     tableSeleccionados.innerHTML = ""
 }
+
+//dos formas de recuperarlo del html
+//Acceder a th precio para subrayarlo o lo que quieras
+const celdaPrecio = document.querySelector("#tableResultados>thead>tr>th:nth-child(1)")
+// const celdaPrecio = document.querySelector("#tableResultados>thead>tr>th")[1]
+celdaPrecio.addEventListener("click",function(){
+    this.classList.toggle("amarillo")//lo metemos en la clase amarillo que es un style del css
+    //Funcion del toggle: si el objeto tiene la clase amarillo, se la quita y si el objeto no tiene la clase amarillo, se la pone
+}) //toggle y replace
