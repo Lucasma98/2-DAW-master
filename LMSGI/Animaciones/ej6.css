@@ -1,0 +1,18 @@
+.imagen {
+    width: 300px;
+    height: 300px;
+    transition: opacity 1s ease;
+}
+
+@keyframes desvanecer {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.imagen:hover {
+    animation: desvanecer 1s forwards;
+}

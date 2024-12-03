@@ -1,0 +1,10 @@
+img{
+    width: 200px; height: 200px;
+}
+.imagen_rotatoria {
+    transition: transform 1s;
+}
+
+.imagen_rotatoria:hover {
+    transform: rotate(360deg );
+}

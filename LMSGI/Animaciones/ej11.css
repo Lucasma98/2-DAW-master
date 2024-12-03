@@ -1,0 +1,21 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 300px;
+}
+.circulo {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 100px;
+    animation: latir 1.2s infinite;
+}
+
+@keyframes latir {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+}

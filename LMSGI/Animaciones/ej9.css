@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 300px;
+}
+.cuadrado {
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+}
+
+@keyframes giroEscalado {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+    to {
+        transform: rotate(180deg) scale(1.5);
+    }
+}
+
+.cuadrado:hover {
+    animation: giroEscalado 0.8s forwards;
+}
