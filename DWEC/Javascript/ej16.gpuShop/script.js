@@ -33,7 +33,7 @@ function listarRecords(patron) {
     .then( resp => resp.json() )
     .then( records => {
         recu_productos = records
-        records.forEach( (r) => {
+        recu_productos.forEach( (r) => {
      
             let newRow = cuerpoGraficas.insertRow()
             let newCell1 = newRow.insertCell()

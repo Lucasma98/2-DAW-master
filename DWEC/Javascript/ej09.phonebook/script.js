@@ -73,7 +73,7 @@ function addContact(){
     if (name && expRegNumber.test(number)) {
         // name.trim() con esto te obliga a que minimo tenga una letra o caracter y con el trim que el espacio no cuente como caracter
         //expRegNumber.test(number.trim()) con esto te obliga a que el numero tenga 9 caracteres y que sean numeros, ademas con number.trim() si ha puesto espacios al escribir el numero los quita.
-        addContactToPhonebook(name,number)//la funcion addContactToPhonebook coga los valores de nombre y numero
+        addContactToPhonebook(name,number)//la funcion addContactToPhonebook coja los valores de nombre y numero
         addContactToTable(name,number)//la funcion refreshTable actualiza la tabla cada vez que añades un contacto a la tabla
         resetForm()     
     }
