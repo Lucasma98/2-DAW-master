@@ -7,6 +7,14 @@ const inputBorrarTodos = document.querySelector("#inputBorrarTodos")
 listarRecords("")//ponemos las "" para que si no pone ninguna letra en el buscador las muestre todas
 
 
+//let cart = [] //si haces lo de comprobar si hay localstorage tienes que quitar los []
+
+// if(esta el carrito en LS) cart = JSON.parse(localStorage.getItem("cart"))
+// else cart = [] // esto es para preguntar si hay algo en el local storage y lo muestre
+
+// showcart//y esto es para que si hay que te lo muestre
+
+
 buscador.addEventListener("keyup",function(){
     listarRecords(buscador.value.trim())
 })
