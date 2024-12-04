@@ -65,7 +65,7 @@ thName.addEventListener("click",function(){
 
 //FUNCIONES AUXILIARES
 function addContact(){
-    let name = inputName.value.trim()//la variable name coje el valor del campo nombre
+    let name = inputName.value.trim().toLowerCase//la variable name coje el valor del campo nombre
     let number = inputNumber.value.trim()//la variable apellidos coje el valor del campo apellidos
     const expRegNumber = /^(\+[0-9]{2,3})?[0-9]{9}$/ // el signo ^ y $ obliga a que haga eso desde el principio(^) hasta el final($). Al poner \+ hace que el signo + no haga actue en la funcion regular como una suma, hace que simplemente cree el signo +.
     //{2,3} que te obliga a que tenga 2 o 3 caracteres entre o-9.Por ejemplo +34 +346, pero al poner ? hace que no sea obligatorio poner el prefijo del numero 
@@ -124,8 +124,6 @@ function addContactToTable(name, number,favorite = false) {
             saveToLS()//aqui tambien debe volver a guardar la informacion porque han habido cambios
         })
     
-
-    
 }
 
 function deleteContactFromPhonebook(name,number){//funcion para borrar del array
@@ -162,3 +160,220 @@ function saveToLS(){
 //JSON.stringify o utilizamos eso o al guardar el dato en el localstorage, se guarda como lo que es(un objeto) y no como la informacion(el contacto)
 }
 
+
+
+const DB_URL = "https://my-json-server.typicode.com/luismiguel-fernandez/examen/";
+
+const inpSearch = document.querySelector("#inpSearch");
+const btnSearch = document.querySelector("#btnSearch");
+
+const btnSortArtist = document.querySelector("#btnSortArtist");
+const btnSortTitle = document.querySelector("#btnSortTitle");
+const btnSortLenInc = document.querySelector("#btnSortLenInc");
+const btnSortLenDec = document.querySelector("#btnSortLenDec");
+
+const selArt = document.querySelector("#selArt");
+const inpTit = document.querySelector("#inpTit");
+const inpLen = document.querySelector("#inpLen");
+const btnAddSong = document.querySelector("#btnAddSong");
+const feedback1 = document.querySelector("#feedback1");
+
+const inpEdit = document.querySelector("#inpEdit");
+const btnEdit = document.querySelector("#btnEdit");
+const feedback2 = document.querySelector("#feedback2");
+
+const inpDelete = document.querySelector("#inpDelete");
+const btnDelete = document.querySelector("#btnDelete");
+const feedback3 = document.querySelector("#feedback3");
+
+const inpPlay = document.querySelector("#inpPlay");
+const inpTimer = document.querySelector("#inpTimer");
+const btnPlay = document.querySelector("#btnPlay");
+const feedback4 = document.querySelector("#feedback4");
+
+const btnLoad = document.querySelector("#btnLoad");
+const btnLoadLS = document.querySelector("#btnLoadLS");
+const btnSaveLS = document.querySelector("#btnSaveLS");
+
+const divSongList = document.querySelector("#divSongList");
+
+let contador = 1;
+let canciones = [];
+
+seleccionarArtista();
+
+btnLoad.addEventListener("click", function() {
+    divSongList.innerHTML = "";
+    fetch(DB_URL + "songs")
+        .then(resp => resp.json())
+        .then(ejemplos => {
+            ejemplos.forEach(ejem => {
+                let newDiv1 = document.createElement("div");
+                newDiv1.innerHTML = ejem.artist + " : " + ejem.title + " - " + ejem.length + "<br>";
+                divSongList.append(newDiv1);
+            });
+        });
+});
+
+btnAddSong.addEventListener("click", function() {
+    const title = inpTit.value.trim();
+    const duration = inpLen.value.trim();
+    const artists = selArt.value.trim();
+
+
+   
+    const expresionTit = /^[a-zA-ZÃ¡Ã©Ã­Ã³ÃºÃÃ‰ÃÃ“Ãš0-9][a-zA-ZÃ¡Ã©Ã­Ã³ÃºÃÃ‰ÃÃ“Ãš0-9\s]*$/
+    const expresionDurac = /^\d+$/
+
+    
+    if (!expresionTit.test(title)) {
+        alert("El tÃ­tulo debe empezar con una letra o nÃºmero, y solo puede contener letras, nÃºmeros y espacios.")
+        inpTit.value = ""
+       
+        return;
+    }
+
+    
+    if (!expresionDurac.test(duration)) {
+        alert( "La duraciÃ³n debe ser un nÃºmero entero positivo.")
+        inpLen.value = ""
+        return;
+    }
+
+   
+    if (title && duration && artists) {
+        addSong(artists, title, duration)
+        feedback1.textContent = ""
+    }
+
+    inpTit.value = ""
+    inpLen.value = ""
+});
+
+btnDelete.addEventListener("click", function() {
+    const index = inpDelete.value.trim()
+    deleteSong(index)
+});
+
+function seleccionarArtista() {
+    fetch(DB_URL + 'artists')
+        .then(resp => resp.json())
+        .then(data => {
+            data.forEach(artist => {
+                const option = document.createElement('option')
+                option.value = artist.name
+                option.textContent = artist.name
+                selArt.append(option);
+            });
+        });
+}
+
+function addSong(artist, title, duration) {
+    const newSong = { id: contador, artist, title, length: duration }
+    canciones.push(newSong)
+
+    const newDiv = document.createElement("div")
+    newDiv.id = "song_" + contador;
+    newDiv.innerHTML = `${contador}. ${artist} : ${title} - (${ formatDuration(duration)})`
+    divSongList.append(newDiv);
+
+    contador++;
+}
+
+function deleteSong(index) {
+   
+    const songIndex = canciones.findIndex(song => song.id == index)
+    if (songIndex !== -1) {
+       
+        canciones.splice(songIndex, 1)
+        
+        
+        const songDiv = document.getElementById("song_" + index)
+        if (songDiv) {
+            songDiv.remove();
+        }
+    }
+}
+
+btnPlay.addEventListener('click', function() {
+    const index = inpPlay.value.trim()
+    playSong(index)
+});
+
+function playSong(index) {
+    const song = canciones.find(song => song.id == index)
+    if (song) {
+        let duration = song.length
+        const timer = setInterval(function() {
+            if (duration <= 0) {
+                clearInterval(timer)
+            } else {
+                duration--;
+                inpTimer.value = formatDuration(duration)
+            }
+        }, 1000);
+    }
+}
+
+function formatDuration(duration) {
+    const minutes = Math.floor(duration / 60)
+    const seconds = duration % 60;
+    return `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`
+}
+
+inpSearch.addEventListener("keyup", function() {
+    const searchTerm = inpSearch.value.trim().toLowerCase()
+
+    
+    divSongList.innerHTML = "";
+
+    
+    const filteredSongs = canciones.filter(song => 
+        song.title.toLowerCase().includes(searchTerm) || 
+        song.artist.toLowerCase().includes(searchTerm)
+    );
+
+    
+    filteredSongs.forEach(song => {
+        let newDiv = document.createElement("div");
+        newDiv.innerHTML = `${song.id}. ${song.artist} : ${song.title} - ${song.length}`
+        divSongList.append(newDiv);
+    });
+
+    
+    if (filteredSongs.length === 0) {
+        divSongList.innerHTML = "<p>Cancion no encontrada</p>"
+    }
+});
+
+btnSortArtist.addEventListener("click", function() {
+    canciones.sort((a, b) => a.artist.localeCompare(b.artist))
+    displaySongs();
+});
+
+
+btnSortTitle.addEventListener("click", function() {
+    canciones.sort((a, b) => a.title.localeCompare(b.title))
+    displaySongs();
+});
+
+
+btnSortLenInc.addEventListener("click", function() {
+    canciones.sort((a, b) => a.length - b.length)
+    displaySongs();
+});
+
+
+btnSortLenDec.addEventListener("click", function() {
+    canciones.sort((a, b) => b.length - a.length)
+    displaySongs();
+});
+
+function displaySongs() {
+    divSongList.innerHTML = ""
+    canciones.forEach(song => {
+        let newDiv = document.createElement("div")
+        newDiv.innerHTML = `${song.id}. ${song.artist} : ${song.title} - (${formatDuration(song.length)})`
+        divSongList.append(newDiv)
+    });
+}

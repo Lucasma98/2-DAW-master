@@ -1,80 +1,100 @@
-const buscador = document.querySelector("#buscador")
-const cuerpoGraficas = document.querySelector("#tableResultados>tbody")
-const tableSeleccionados = document.querySelector("#tableSeleccionados>tbody")
-let recu_productos
-const inputBorrarTodos = document.querySelector("#inputBorrarTodos")
-
-listarRecords("")//ponemos las "" para que si no pone ninguna letra en el buscador las muestre todas
-
-
-//let cart = [] //si haces lo de comprobar si hay localstorage tienes que quitar los []
-
-// if(esta el carrito en LS) cart = JSON.parse(localStorage.getItem("cart"))
-// else cart = [] // esto es para preguntar si hay algo en el local storage y lo muestre
-
-// showcart//y esto es para que si hay que te lo muestre
-
+const buscador=document.querySelector("#buscador")
+const tableResultados=document.querySelector("#tableResultados>tbody")
+const tableSeleccionados=document.querySelector("#tableSeleccionados>tbody")
+const inputBorrarTodos=document.querySelector("#inputBorrarTodos")
+let recu_graficas
+let vacio=""
 
 buscador.addEventListener("keyup",function(){
-    listarRecords(buscador.value.trim())
+
+    tableGraficas(buscador.value.trim())
 })
 
 inputBorrarTodos.addEventListener("click",function(){
-    BorrarCarrito()
+   
+    tableSeleccionados.innerHTML=""
+    localStorage.clear()
 })
 
+tableGraficas(vacio)
+
+let carrito=JSON.parse(localStorage.getItem("carrito") || "[]")
+tableCarrito(carrito)
 
 
 
-function listarRecords(patron) {
-    cuerpoGraficas.innerHTML = ""
-    //recuperar el array de records de la BD
+
+function tableGraficas(patron)
+{
+    tableResultados.innerHTML=""
     fetch("server/gpushop.php?pattern=" + patron)
-    .then( resp => resp.json() )
-    .then( records => {
-        recu_productos = records
-        recu_productos.forEach( (r) => {
-     
-            let newRow = cuerpoGraficas.insertRow()
-            let newCell1 = newRow.insertCell()
-            let newCell2 = newRow.insertCell()
-            let newCell3 = newRow.insertCell()
-            newCell1.textContent = r.titulo 
-            newCell2.textContent = r.precio
-            
-            let newAddButton = document.createElement("button")
-            newAddButton.textContent= "añadir"
-            newAddButton.addEventListener("click",function(){
-                añadirSeleccionado(r.id)
+    .then(resp => resp.json())
+    .then(graficas => {
+        recu_graficas=graficas
+        graficas.forEach((g) => {
+            let newRow=tableResultados.insertRow()
+            let newCell1=newRow.insertCell()
+            let newCell2=newRow.insertCell()            
+            let newCell3=newRow.insertCell()            
+
+            newCell1.textContent=g.titulo
+            newCell2.textContent=g.precio
+
+            let buttonAdd=document.createElement("BUTTON")
+            buttonAdd.textContent="Añadir"
+            newCell3.append(buttonAdd)
+
+            buttonAdd.addEventListener("click",function(){
+                añadirLocalStorage(g.id)
             })
-            newCell3.append(newAddButton)
-        })
+        });
     })
 }
 
-    
-function añadirSeleccionado(id){
-    let tarjeta = recu_productos.find(p => p.id == id)
-    
-    console.table(tarjeta)//te lo muestre en el F12
+function añadirLocalStorage(id)
+{
+    let carrito = JSON.parse(localStorage.getItem("carrito") || "[]")
+    let producto = recu_graficas.find(p => p.id == id)
 
-    let newRow = tableSeleccionados.insertRow()
-    let newCell1 = newRow.insertCell()
-    let newCell2 = newRow.insertCell()
-    
-    newCell1.textContent = tarjeta.titulo
-    newCell2.textContent = tarjeta.precio
+    carrito.push(producto)
+
+    localStorage.setItem("carrito",JSON.stringify(carrito))
+
+    tableCarrito(carrito)
 }
 
-function BorrarCarrito(){
-    tableSeleccionados.innerHTML = ""
-}
+function tableCarrito(carrito)
+{
+    tableSeleccionados.innerHTML=""
+    
+    carrito.forEach(g=> {
 
-//dos formas de recuperarlo del html
-//Acceder a th precio para subrayarlo o lo que quieras
-const celdaPrecio = document.querySelector("#tableResultados>thead>tr>th:nth-child(1)")
-// const celdaPrecio = document.querySelector("#tableResultados>thead>tr>th")[1]
-celdaPrecio.addEventListener("click",function(){
-    this.classList.toggle("amarillo")//lo metemos en la clase amarillo que es un style del css
-    //Funcion del toggle: si el objeto tiene la clase amarillo, se la quita y si el objeto no tiene la clase amarillo, se la pone
-}) //toggle y replace
+        let newRow=tableSeleccionados.insertRow()
+            let newCell1=newRow.insertCell()
+            let newCell2=newRow.insertCell()            
+            let newCell3=newRow.insertCell()            
+
+            newCell1.textContent=g.titulo
+            newCell2.textContent=g.precio
+
+            let buttonDel=document.createElement("BUTTON")
+            buttonDel.textContent="borrar"
+            newCell3.append(buttonDel)
+
+            buttonDel.addEventListener("click",function(){
+                
+                let i=carrito.indexOf(g)
+                if(i!== -1)
+                {
+                    carrito.splice(i,1)
+                    localStorage.setItem("carrito",JSON.stringify(carrito))
+                    newRow.textContent=""
+                }
+                
+            })
+
+
+    })
+        
+    
+}
