@@ -1,0 +1,10 @@
+.desplazamiento_cuadro {
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    transition: transform 0.5s;
+  }
+  
+.desplazamiento_cuadro:hover {
+    transform: translateX(300px);
+}

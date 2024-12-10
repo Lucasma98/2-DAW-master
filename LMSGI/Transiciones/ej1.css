@@ -1,0 +1,10 @@
+.transicion_btn{
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.transicion_btn:hover{
+    background-color: green;
+} 

@@ -51,10 +51,10 @@
         <p class="presentacion-subtitulo">Mis estudios</p>
         </section>
         <div>
-            <div>
-            </div><nav class="d-flex justify-content-around mb-4">
-            <a href="#proyectos" class="nav-link">Mis proyectos</a>
-            <a href="#sobre-mi" class="nav-link">Más sobre mí</a>
+            <nav class="d-flex justify-content-around mb-4">
+            <a href="#proyectos" class="nav-link" aria-label="Ir a la sección de mis proyectos">Mis proyectos</a>
+            <a href="#sobre-mi" class="nav-link" aria-label="Ir a la sección sobre mí">Más sobre mí</a>
+            </nav>
             </div>
             <ul class="btn btn-light mis_proyectos">
                 <li><a href="#">Proyecto 1</a></li>
@@ -64,9 +64,35 @@
                 <li><a href="#">Proyecto 3</a></li>
             </ul>
             <a href="imagenes/Curriculum.pdf" class="btn btn-light sobre_mi" download>Descargar Currículum (PDF)</a>
+            <video controls class="video_explicacion">
+                <source src="imagenes/Descripcion1.mp4" type="video/mp4">
+                <track kind="subtitles" src="imagenes/Subtitles.vtt" srclang="en" label="English">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
         </div>
-
-        </nav>
+        <section id="formulario" class="mt-5">
+            <h2 class="text-center mb-4">Contáctame</h2>
+            <form id="contact-form" class="formulario">
+            <div class="mb-3">
+                <label for="nombre_completo" class="form-label">Nombre Completo</label>
+                <input type="text" id="nombre_completo" name="nombre_completo" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="opcion" class="form-label">Motivo de contacto</label>
+                <select id="opcion" name="opcion" class="form-select" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="consulta">Consulta</option>
+                    <option value="propuesta">Propuesta</option>
+                </select>
+            </div>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+            <p id="mensaje-confirmacion" class="mt-3 text-success" style="display: none;">¡Gracias por contactarme! Responderé a la brevedad.</p>
+        </section>
     </div>
 </div>
 </body>

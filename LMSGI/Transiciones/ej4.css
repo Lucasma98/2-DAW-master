@@ -1,0 +1,8 @@
+.transicion_tamaño {
+    width: 200px;
+    transition: width 0.4s;
+  }
+  
+  .transicion_tamaño:hover {
+    width: 300px;
+  }

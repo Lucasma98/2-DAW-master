@@ -35,7 +35,7 @@ body.oscuro {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid rgb(255, 204, 0); /* Bordes alrededor de la foto */
+  border: 3px solid rgb(229, 172, 0); /* Bordes alrededor de la foto */
 }
 .foto img {
   width: 100%;
@@ -45,7 +45,7 @@ body.oscuro {
 
 .presentacion-titulo {
   font-size: 60px;
-  color: rgb(255, 204, 0); /* Usamos el color brillante para el título */
+  color: rgb(229, 172, 0); /* Usamos el color brillante para el título */
 }
 
 .presentacion-subtitulo {
@@ -55,12 +55,12 @@ body.oscuro {
 .nav-link {
   font-size: 30px;
   font-weight: bold;
-  color: rgb(255, 204, 0); /* Botones de navegación */
+  color: rgb(229, 172, 0); /* Botones de navegación */
   text-decoration: none;
 }
 
 .btn-light {
-  background-color: rgb(255, 204, 0);
+  background-color: rgb(229, 172, 0);
   color: rgb(40, 44, 52);
   border: none;
   border-radius: 5px;
@@ -87,7 +87,22 @@ ul {
   padding: 10px;
   border-radius: 8px;
   margin-left: 740px;
-  margin-top: -200px;
+  margin-top: -300px;
+}
+
+#formulario {
+  background-color: rgb(78, 84, 200);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 0;
+  color: rgb(255, 255, 255);
+}
+
+.video_explicacion {
+  width: 300px;
+  height: 150px;
+  margin-left: 740px;
+  margin-top: -100px;
 }
 
 /*# sourceMappingURL=style.css.map */

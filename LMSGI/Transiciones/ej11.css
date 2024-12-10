@@ -1,0 +1,12 @@
+body{
+    margin-top: 100px;
+}
+.imagen_diagonal {
+    width: 250px;
+    height: 250px;
+    transition: transform 0.7s;
+}
+
+.imagen_diagonal:hover {
+    transform: translate(50px, -50px);
+}

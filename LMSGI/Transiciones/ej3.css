@@ -1,0 +1,6 @@
+.imagen_semi_transparente{
+    transition: opacity 0.3s;
+}
+.imagen_semi_transparente:hover {
+    opacity: 0.5;
+}

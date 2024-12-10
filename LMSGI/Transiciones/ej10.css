@@ -1,0 +1,8 @@
+.aumento_imagen {
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.aumento_imagen:hover {
+    transform: scale(1.2);
+}

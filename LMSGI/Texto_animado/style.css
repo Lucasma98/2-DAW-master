@@ -1,0 +1,116 @@
+body{
+    background-color: #223;
+    color: white;
+}
+.box{
+    size: 200px;
+    background-color: blueviolet;
+    width: var(size);
+    height: var(size);
+    transition: all 2s ease 2s;
+    animation: 
+    change-color 5s infinite linear normal,
+    move-box 5s infinite linear normal 5s;
+}
+.box:hover{
+    height: 400px;
+    background-color: indigo;
+    transform: translate(200px,0);
+}
+.box.pause{
+    animation-play-state: paused;
+}
+@keyframes change-color{
+    0%{
+        background-color: indigo;
+    }
+    100%{
+        background-color: red;
+    }
+}
+@keyframes parpadeo {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+.box{
+    animation: parpadeo 1s infinite;
+}
+.box {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: box 3s forwards;
+}
+
+@keyframes box {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+.box{
+    animation: box 3.5s;
+    animation-iteration-count: infinite
+}
+@keyframes box {
+    0%,100% {
+        transform: translateY(100px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+}
+
+.container2{
+    margin-top: 300px;
+}
+.frase{
+    transform: translateY(100%);
+    animation: cambiarTexto 9s infinite;
+}
+.n1{
+    animation-delay: 0s;
+}
+
+.n2 {
+    animation-delay: 2s;
+}
+
+.n3 {
+    animation-delay: 4s;
+}
+
+@keyframes cambiarTexto {
+    0% {
+        transform: translateY(100%);
+    }
+    10%,
+    30% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+.box{
+    animation: sombras_animadas 2s infinite;
+}
+@keyframes sombras_animadas {
+    0% {
+        box-shadow: 0 0 10px 0px red;
+    }
+    50% {
+        box-shadow: 0 0 10px 10px green;
+    }
+    100% {
+        box-shadow: 0 0 10px 0px blue;
+    }
+}

@@ -1,0 +1,10 @@
+.transformacion_boton {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: border-radius 0.5s;
+}
+
+.transformacion_boton:hover {
+    border-radius: 50%;
+}

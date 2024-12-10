@@ -1,0 +1,8 @@
+.cuadro-texto {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.cuadro-texto:focus {
+    opacity: 1;
+}
