@@ -1,0 +1,5 @@
+<div class="row row-cols-4">
+    @for (v of getVehicles(); track $index) { <!--un bucle para que crea una tarjeta para cada uno de los vehiculos del vehicle-card-list.component.ts-->
+    <app-vehicle-card [vehicle]="v"/> <!--en cada tarjeta llamamos a cada vehiculo()-->
+    }
+</div>
