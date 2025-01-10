@@ -1,0 +1,5 @@
+<div class="row row-cols-4">
+    @for (m of getmanufacturer(); track $index) { 
+    <app-manufacturer-card [manufacturer]="m" />
+    }
+</div>
