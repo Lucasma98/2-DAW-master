@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE videoclub SYSTEM "videoclub.dtd">
+<videoclub>
+    <factura>
+        <cliente idCliente="C004">
+            <nombre>Pedro</nombre>
+            <apellido1>Sanchez</apellido1>
+            <apellido2>Ramírez</apellido2>
+            <dni>45678901D</dni>
+            <telefono>654987321</telefono>
+        </cliente>
+        <resguardo>
+            <forma_pago>PayPal</forma_pago>
+            <importe_total>32.90</importe_total>
+        </resguardo>
+        <alquileres>
+            <fecha_devolucion>2025-01-18</fecha_devolucion>
+            <pelicula idPelicula="P1" valoracion="6.8">
+                <titulo>Avatar</titulo>
+                <genero>Ciencia Ficción</genero>
+                <duracion>162</duracion>
+                <actores>
+                    <actor>Sam Worthington</actor>
+                    <actor>Zoe Saldana</actor>
+                    <actor>Sigourney Weaver</actor>
+                </actores>
+                <caratula>caratulas/c3537.jpg</caratula>
+            </pelicula>
+        </alquileres>
+        <compras>
+            <dvds>
+                <dvd>
+                    <titulo>Matrix</titulo>
+                    <fecha_salida>1999-03-31</fecha_salida>
+                    <extras>No</extras>
+                </dvd>
+            </dvds>
+            <cintas_video>
+                <cinta_video>
+                    <formato>VHS</formato>
+                    <rebobinada>Sí</rebobinada>
+                </cinta_video>
+            </cintas_video>
+        </compras>
+    </factura>
+
+    <factura>
+        <cliente idCliente="C2">
+            <nombre>Juan</nombre>
+            <apellido1>Perez</apellido1>
+            <apellido2>Lopez</apellido2>
+            <dni>53556789B</dni>
+            <telefono>987943456</telefono>
+        </cliente>
+        <resguardo>
+            <forma_pago>Efectivo</forma_pago>
+            <importe_total>40.75</importe_total>
+        </resguardo>
+        <compras>
+            <dvds>
+                <dvd>
+                    <titulo>Interstellar</titulo>
+                    <fecha_salida>2014-11-07</fecha_salida>
+                    <extras>Sí</extras>
+                </dvd>
+            </dvds>
+        </compras>
+    </factura>
+
+    <factura>
+        <cliente idCliente="C3">
+            <nombre>Maria</nombre>
+            <apellido1>Lopez</apellido1>
+            <apellido2>Gonzalez</apellido2>
+            <dni>341654890C</dni>
+            <telefono>912345678</telefono>
+        </cliente>
+        <resguardo>
+            <forma_pago>Transferencia</forma_pago>
+            <importe_total>18.20</importe_total>
+        </resguardo>
+        <alquileres>
+            <fecha_devolucion>2025-01-20</fecha_devolucion>
+            <pelicula idPelicula="P2">
+                <titulo>Titanic</titulo>
+                <genero>Drama</genero>
+                <duracion>195</duracion>
+                <actores>
+                    <actor>Leonardo DiCaprio</actor>
+                    <actor>Kate Winslet</actor>
+                    <actor>Billy Zane</actor>
+                </actores>
+            </pelicula>
+        </alquileres>
+        <compras>
+            <cintas_video>
+                <cinta_video>
+                    <formato>VHS</formato>
+                    <rebobinada>No</rebobinada>
+                </cinta_video>
+            </cintas_video>
+        </compras>
+    </factura>
+</videoclub>

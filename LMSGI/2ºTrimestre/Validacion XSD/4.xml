@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="empleados">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="empleado" maxOccurs="unbounded">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="nombre" type="xsd:string"/>
+                            <xsd:element name="edad">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:integer">
+                                        <xsd:minInclusive value="18"/>
+                                        <xsd:maxInclusive value="65"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                            <xsd:element name="departamento" type="xsd:string" minOccurs="0"/>
+                        </xsd:sequence>
+                        <xsd:attribute name="id" type="xsd:ID" use="required"/>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

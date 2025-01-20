@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hotel [
+    <!ELEMENT hotel (habitaciones, reservas)>
+    <!ATTLIST hotel 
+        nombre CDATA #REQUIRED
+        ubicacion CDATA #REQUIRED>
+    <!ELEMENT habitaciones (habitacion+)>
+    <!ELEMENT habitacion (estado, cliente)>
+    <!ATTLIST habitacion 
+        id ID #REQUIRED
+        tipo (suite | doble | individual) #REQUIRED
+        precio CDATA #REQUIRED>
+    <!ELEMENT estado (#PCDATA)>
+    <!ATTLIST estado 
+        valor (Disponible | Ocupada) #REQUIRED>
+    <!ELEMENT cliente (nombre, documento)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT documento (#PCDATA)>
+    <!ATTLIST documento 
+        tipo (DNI | Pasaporte) #REQUIRED>
+    <!ELEMENT reservas (reserva+)>
+    <!ELEMENT reserva (cliente, idHabitacion)>
+    <!ATTLIST reserva 
+        id ID #REQUIRED
+        fecha CDATA #REQUIRED>
+
+    <!ELEMENT idHabitacion EMPTY>
+    <!ATTLIST idHabitacion 
+        id IDREF #REQUIRED>
+]>
+<hotel nombre="Hotel Gran Lujo" ubicacion="Madrid">
+    <habitaciones>
+        <habitacion id="H101" tipo="suite" precio="200.00">
+            <estado valor="Disponible" />
+        </habitacion>
+        <habitacion id="H102" tipo="doble" precio="150.00">
+            <estado valor="Ocupada" />
+            <cliente>
+                <nombre>Juan Pérez</nombre>
+                <documento tipo="DNI">12345678A</documento>
+            </cliente>
+        </habitacion>
+    </habitaciones>
+    <reservas>
+        <reserva id="R001" fecha="2025-02-10">
+            <cliente>
+                <nombre>María López</nombre>
+                <documento tipo="Pasaporte">X98765432</documento>
+            </cliente>
+            <idHabitacion id="H101" />
+        </reserva>
+        <reserva id="R002" fecha="2025-02-12">
+            <cliente>
+                <nombre>Pedro Gómez</nombre>
+                <documento tipo="DNI">87654321B</documento>
+            </cliente>
+            <idHabitacion id="H101" />
+        </reserva>
+    </reservas>
+</hotel>

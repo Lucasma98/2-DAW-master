@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editoriales>
+    <editorial>
+        <nombre>Editorial Alfa</nombre>
+        <direccion>Calle Mayor, 123, Madrid, España</direccion>
+        <email>contacto@editorialalfa.com</email>
+        <paginaWeb>http://www.editorialalfa.com</paginaWeb>
+        <telefono>+34 915 123 456</telefono>
+        <fax>+34 915 654 321</fax>
+        <libros>
+            <libro>
+                <titulo>El Quijote</titulo>
+                <autor>Miguel de Cervantes</autor>
+                <fecha>1605-01-16</fecha>
+                <isbn>978-3-16-148410-0</isbn>
+            </libro>
+            <libro>
+                <titulo>Cien Años de Soledad</titulo>
+                <autor>Gabriel García Márquez</autor>
+                <fecha>1967-05-30</fecha>
+                <isbn>978-0-14-118499-9</isbn>
+            </libro>
+        </libros>
+    </editorial>
+    <editorial>
+        <nombre>Editorial Beta</nombre>
+        <direccion>Avenida Libertad, 45, Barcelona, España</direccion>
+        <email>info@editorialbeta.com</email>
+        <paginaWeb>http://www.editorialbeta.com</paginaWeb>
+        <telefono>+34 934 567 890</telefono>
+        <fax>+34 934 098 765</fax>
+        <libros>
+            <libro>
+                <titulo>La Sombra del Viento</titulo>
+                <autor>Carlos Ruiz Zafón</autor>
+                <fecha>2001-04-20</fecha>
+                <isbn>978-0-452-28702-3</isbn>
+            </libro>
+            <libro>
+                <titulo>Don Juan Tenorio</titulo>
+                <autor>José Zorrilla</autor>
+                <fecha>1844-03-28</fecha>
+                <isbn>978-0-19-283746-6</isbn>
+            </libro>
+        </libros>
+    </editorial>
+</editoriales>

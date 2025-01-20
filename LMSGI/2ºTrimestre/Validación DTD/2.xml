@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catalogo SYSTEM "2.dtd">
+<catalogo>
+    <categoria nombre="Electrónica">
+        <producto id="P001">
+            <nombre>Smartphone</nombre>
+            <precio moneda="EUR">699.99</precio>
+            <stock>Disponible</stock>
+        </producto>
+        <producto id="P002">
+            <nombre>Portátil</nombre>
+            <precio moneda="USD">1200.00</precio>
+            <stock>Agotado</stock>
+        </producto>
+    </categoria>
+    <categoria nombre="Ropa">
+        <producto id="P003">
+            <nombre>Camiseta</nombre>
+            <precio moneda="EUR">19.99</precio>
+            <stock>Disponible</stock>
+        </producto>
+    </categoria>
+</catalogo>

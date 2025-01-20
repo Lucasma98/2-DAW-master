@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tabla_periodica SYSTEM "tabla_periodica.dtd">
+<tabla_periodica>
+    <atomo estado="Gaseoso">
+        <nombre>Hidrógeno</nombre>
+        <simbolo>H</simbolo>
+        <numero_atomico>1</numero_atomico>
+        <peso_atomico>1.00794</peso_atomico>
+        <punto_ebullicion unidades="Kelvin">20.28</punto_ebullicion>
+        <densidad unidades="gr/cm3">0.0899</densidad>
+    </atomo>
+
+    <atomo estado="Gaseoso">
+        <nombre>Nitrogeno</nombre>
+        <simbolo>N</simbolo>
+        <numero_atomico>7</numero_atomico>
+        <peso_atomico>14.007</peso_atomico>
+        <punto_ebullicion unidades="Kelvin">77.36</punto_ebullicion>
+        <densidad unidades="gr/cm3">1.2506</densidad>
+    </atomo>
+
+    <atomo estado="Solido">
+        <nombre>Litio</nombre>
+        <simbolo>Li</simbolo>
+        <numero_atomico>3</numero_atomico>
+        <peso_atomico>6.94</peso_atomico>
+        <punto_ebullicion unidades="Kelvin">1615</punto_ebullicion>
+        <densidad unidades="gr/cm3">0.534</densidad>
+    </atomo>
+
+    <atomo estado="Solido">
+        <nombre>Berilio</nombre>
+        <simbolo>Be</simbolo>
+        <numero_atomico>4</numero_atomico>
+        <peso_atomico>9.0122</peso_atomico>
+        <punto_ebullicion unidades="Kelvin">2742</punto_ebullicion>
+        <densidad unidades="gr/cm3">1.85</densidad>
+    </atomo>
+</tabla_periodica>

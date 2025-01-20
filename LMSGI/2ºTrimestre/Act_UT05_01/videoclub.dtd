@@ -1,0 +1,35 @@
+<!ELEMENT videoclub (factura)>
+<!ELEMENT factura (cliente, resguardo(alquileres, compras))>
+
+<!ELEMENT cliente (nombre, 1apellido, 2apellido, dni, telefono)>
+<!ELEMENT idCliente CDATA>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT 1apellido (#PCDATA)>
+<!ELEMENT 2apellido (#PCDATA)>
+<!ELEMENT dni (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+
+<!ELEMENT resguardo (forma_pago, importe_total)>
+<!ELEMENT forma_pago (#PCDATA)>
+<!ELEMENT importe_total (#PCDATA)>
+
+<!ELEMENT alquileres (fecha_devolucion, pelicula)>
+<!ELEMENT fecha_devolucion (#PCDATA)>
+<!ELEMENT pelicula (titulo, genero, duracion, actores, caratula?)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT genero (#PCDATA)>
+<!ELEMENT duracion (#PCDATA)>
+<!ELEMENT actores (actor, actor, actor)>
+<!ELEMENT actor (#PCDATA)>
+<!ELEMENT caratula (#PCDATA)>
+
+<!ELEMENT compras (dvds?, cintas_video?)>
+<!ELEMENT dvds (dvd+)>
+<!ELEMENT dvd (titulo, fecha_salida, extras)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT fecha_salida (#PCDATA)>
+<!ELEMENT extras (#PCDATA)>
+<!ELEMENT cintas_video (cinta_video+)>
+<!ELEMENT cinta_video (formato, rebobinada)>
+<!ELEMENT formato (#PCDATA)>
+<!ELEMENT rebobinada (#PCDATA)>

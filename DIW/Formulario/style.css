@@ -1,0 +1,76 @@
+body {
+    background-color: rgb(206, 197, 197);
+    margin: 0;
+    padding: 20px;
+}
+
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    margin-left: 350px ;
+}
+
+.form-container h1 {
+    text-align: center;
+    color: black;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group.inline label {
+    display: inline;
+    font-weight: normal;
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-item, .checkbox-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.radio-item label, .checkbox-item label {
+    margin-left: 10px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #ccc;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #999;
+}
