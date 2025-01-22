@@ -1,0 +1,12 @@
+<?XML version="1.0"? encoding="UTF-8"?>
+<!DOCTYPE 1">
+<ciudad>Pamplona</ciudad>
+<dia>19</dia>
+<mes>6</mes>
+<ciudad>Pamplona</ciudad> <!-- He corregido el cierre de la etiqueta -->
+<_rojo></rojo><!-- He añadido el cierre a la etiqueta -->
+<colores>Rojo y Naranja</colores><!--El nombre de la etiqueta no puede comenzar con un número-->
+<Aficiones>Cine, Bailar, Nadar</Aficiones>
+<persona><nombre>Elsa</nombre></persona><!-- He corregido el orden delcierre de la etiqueta para que corresponda con el nombre de la etiqueta -->
+<color_favorito>azul</color_favorito><!-- He eliminado el espacio en el nombre de la etiqueta y le he añadido un _ -->
+

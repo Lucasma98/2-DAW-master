@@ -1,0 +1,102 @@
+<!ELEMENT html (head, body)>
+<!ELEMENT head (base, link, meta, noscript, script, style, title)>
+<!ELEMENT body (a, hr, img, h1, h6, p, strong, sub, sup, ol, ul, table, form)*>
+
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT base EMPTY>
+<!ELEMENT link EMPTY>
+<!ELEMENT meta EMPTY>
+<!ELEMENT noscript (#PCDATA)>
+<!ELEMENT script (#PCDATA)>
+<!ELEMENT style (#PCDATA)>
+
+<!ELEMENT a (#PCDATA)>
+<!ELEMENT hr EMPTY>
+<!ELEMENT img EMPTY>
+<!ELEMENT h1 (#PCDATA)>
+<!ELEMENT h6 (#PCDATA)>
+<!ELEMENT p (#PCDATA)>
+<!ELEMENT strong (#PCDATA)>
+<!ELEMENT sub (#PCDATA)>
+<!ELEMENT sup (#PCDATA)>
+<!ELEMENT ol (li)>
+<!ELEMENT ul (li)>
+<!ELEMENT li (#PCDATA)>
+<!ELEMENT table (tr)>
+<!ELEMENT tr (td)>
+<!ELEMENT td (#PCDATA)>
+<!ELEMENT form (#PCDATA)>
+
+<!ATTLIST a
+           title CDATA #IMPLIED
+           onclick CDATA #IMPLIED
+           style CDATA #IMPLIED
+           href CDATA #IMPLIED
+           rel CDATA #IMPLIED>
+<!ATTLIST hr
+            title CDATA #IMPLIED
+            onclick CDATA #IMPLIED
+            style CDATA #IMPLIED>
+<!ATTLIST img
+             title CDATA #IMPLIED
+             onclick CDATA #IMPLIED
+             style CDATA #IMPLIED
+             src CDATA #REQUIRED
+             alt CDATA #REQUIRED
+             width CDATA #IMPLIED
+             height CDATA #IMPLIED>
+<!ATTLIST h1
+            title CDATA #IMPLIED
+            onclick CDATA #IMPLIED
+            style CDATA #IMPLIED
+            align (left, center, right) #IMPLIED>
+<!ATTLIST h6
+            title CDATA #IMPLIED
+            onclick CDATA #IMPLIED
+            style CDATA #IMPLIED
+            align (left, center, right) #IMPLIED>
+<!ATTLIST p
+           title CDATA #IMPLIED
+           onclick CDATA #IMPLIED
+           style CDATA #IMPLIED>
+<!ATTLIST strong
+                title CDATA #IMPLIED
+                onclick CDATA #IMPLIED
+                style CDATA #IMPLIED>
+<!ATTLIST sub
+             title CDATA #IMPLIED
+             onclick CDATA #IMPLIED
+             style CDATA #IMPLIED>
+<!ATTLIST sup
+             title CDATA #IMPLIED
+             onclick CDATA #IMPLIED
+             style CDATA #IMPLIED>
+<!ATTLIST ol
+            title CDATA #IMPLIED
+            onclick CDATA #IMPLIED
+            style CDATA #IMPLIED>
+<!ATTLIST ul
+            title CDATA #IMPLIED
+            onclick CDATA #IMPLIED
+            style CDATA #IMPLIED>
+<!ATTLIST li
+            title CDATA #IMPLIED
+            onclick CDATA #IMPLIED
+            style CDATA #IMPLIED>
+<!ATTLIST table
+               title CDATA #IMPLIED
+               onclick CDATA #IMPLIED
+               style CDATA #IMPLIED
+               align (left, center, right) #IMPLIED
+               border CDATA #IMPLIED
+               height CDATA #IMPLIED
+               width CDATA #IMPLIED>
+<!ATTLIST form
+              title CDATA #IMPLIED
+              onclick CDATA #IMPLIED
+              style CDATA #IMPLIED
+              action CDATA #IMPLIED
+              method CDATA #IMPLIED
+              enctype CDATA #IMPLIED>
+
+

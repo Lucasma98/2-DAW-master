@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE libreria [
+    <!ELEMENT libreria (catalogo, pedidos)>
+    <!ATTLIST libreria
+        nombre CDATA #REQUIRED
+        ubicacion CDATA #REQUIRED>
+    <!ELEMENT catalogo (libro+)>
+    <!ELEMENT libro (titulo, autor, precio, stock)>
+    <!ATTLIST libro
+        id ID #REQUIRED
+        genero (Ficcion | Ciencia | Infantil) #REQUIRED>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT autor (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>
+    <!ELEMENT stock (#PCDATA)>
+    <!ELEMENT pedidos (pedido+)>
+    <!ELEMENT pedido (cliente, idLibro+)>
+    <!ATTLIST pedido
+        id ID #REQUIRED
+        fecha CDATA #REQUIRED>
+    <!ELEMENT cliente (nombre, email)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT idLibro EMPTY>
+    <!ATTLIST idLibro id IDREF #REQUIRED>
+]>
+<libreria nombre="Libreria" ubicacion="Madrid">
+    <catalogo>
+        <libro id="L1" genero="Ficcion">
+            <titulo>El Quijote</titulo>
+            <autor>Miguel de Cervantes</autor>
+            <precio>19.99</precio>
+            <stock>10</stock>
+        </libro>
+        <libro id="L2" genero="Ciencia">
+            <titulo>Creacion del universo</titulo>
+            <autor>George Gamow</autor>
+            <precio>15.99</precio>
+            <stock>5</stock>
+        </libro>
+        <libro id="L3" genero="Infantil">
+            <titulo>El Principito</titulo>
+            <autor>Antoine de Saint-Exupery</autor>
+            <precio>12.99</precio>
+            <stock>20</stock>
+        </libro>
+    </catalogo>
+    <pedidos>
+        <pedido id="P1" fecha="2025-01-15">
+            <cliente>
+                <nombre>Fran Perez</nombre>
+                <email>Fran.perez@email.com</email>
+            </cliente>
+            <idLibro id="L1"/>
+            <idLibro id="L2"/>
+        </pedido>
+        <pedido id="P2" fecha="2025-01-16">
+            <cliente>
+                <nombre>Maria Lopez</nombre>
+                <email>maria.lopez@email.com</email>
+            </cliente>
+            <idLibro id="L3"/>
+        </pedido>
+    </pedidos>
+</libreria>

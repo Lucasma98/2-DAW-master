@@ -1,0 +1,28 @@
+<?XML version="1.0"? encoding="UTF-8"?>
+<!DOCTYPE 2">
+<ciudades>
+    <ciudad continente="Asia">
+        <nombre>Nueva Delhi</nombre>
+        <pais>India</pais>
+    </ciudad>
+    <ciudad continente="Europa">
+        <nombre>Lisboa</nombre>
+        <pais>Portugal</pais>
+    </ciudad>
+    <ciudad continente="África">
+        <nombre>El Cairo</nombre>
+        <pais>Egipto</pais>
+    </ciudad>
+    <ciudad continente="América del Norte">
+        <nombre>Washington</nombre>
+        <pais>Estados Unidos</pais>
+    </ciudad>
+    <ciudad continente="Oceanía">
+        <nombre>Sídney</nombre>
+        <pais>Australia</pais>
+    </ciudad>
+    <ciudad continente="América del Sur">
+        <nombre>Buenos Aires</nombre>
+        <pais>Argentina</pais>
+    </ciudad>
+</ciudades>

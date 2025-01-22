@@ -1,0 +1,10 @@
+<!ELEMENT atomo (nombre, simbolo, numero_atomico, peso_atomico, punto_ebullicion, densidad)>
+
+<!ELEMENT nombre (#PCDATA)> 
+<!ELEMENT simbolo (#PCDATA)> 
+<!ELEMENT numero_atomico (#PCDATA)>
+<!ELEMENT peso_atomico (#PCDATA)> 
+<!ELEMENT punto_ebullicion (#PCDATA)> 
+<!ATTLIST punto_ebullicion unidades CDATA> 
+<!ELEMENT densidad (#PCDATA)> 
+<!ATTLIST densidad unidades CDATA> 

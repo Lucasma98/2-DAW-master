@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Formulario de Registro</h1>
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="edad">Edad</label>
+                <select id="edad" name="edad" required>
+                    <option selected>Selecciona tu edad</option>
+                    <option value="18-25">18-25</option>
+                    <option value="26-35">26-35</option>
+                    <option value="36-45">36-45</option>
+                    <option value="46+">46 o más</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <label>Genero:</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="masculino" name="genero" required>
+                        <label for="masculino">Masculino</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="femenino" name="genero">
+                        <label for="femenino">Femenino</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="otro" name="genero">
+                        <label for="otro">Otro</label>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label>Intereses:</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="diseño" name="intereses">
+                        <label for="diseño">Diseño</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="desarrollo" name="intereses">
+                        <label for="desarrollo">Desarrollo</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="otros" name="intereses">
+                        <label for="otros">Otros</label>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="satisfaccion">Nivel de Satisfacción (1-5):</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="satisfaccion1" name="satisfaccion" value="1" required>
+                        <label for="satisfaccion1">1</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="satisfaccion2" name="satisfaccion" value="2">
+                        <label for="satisfaccion2">2</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="satisfaccion3" name="satisfaccion" value="3">
+                        <label for="satisfaccion3">3</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="satisfaccion4" name="satisfaccion" value="4">
+                        <label for="satisfaccion4">4</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="satisfaccion5" name="satisfaccion" value="5">
+                        <label for="satisfaccion5">5</label>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="sugerencias">Sugerencias:</label>
+                <textarea id="sugerencias" name="sugerencias" placeholder="Escribe tus sugerencias aquí"></textarea>
+            </div>
+            
+            <div class="form-buttons">
+                <button type="submit" class="btn-primary">Enviar</button>
+                <button type="reset" class="btn-secondary">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

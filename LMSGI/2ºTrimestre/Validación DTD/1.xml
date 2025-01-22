@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE evento [
+    <!ELEMENT evento (nombre, fecha, ubicacion, asistentes)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT fecha (#PCDATA)>
+    <!ELEMENT ubicacion (ciudad, lugar)>
+    <!ELEMENT ciudad (#PCDATA)>
+    <!ELEMENT lugar (#PCDATA)>
+    <!ELEMENT asistentes (asistente+)>
+    <!ELEMENT asistente (nombre, email)>
+    <!-- <!ELEMENT nombre (#PCDATA)> -->
+    <!ELEMENT email (#PCDATA)>
+]>
+
+
+<evento>
+ <nombre>Conferencia de Tecnología</nombre>
+ <fecha>2025-03-15</fecha>
+ <ubicacion>
+    <ciudad>Barcelona</ciudad>
+    <lugar>Palau de Congressos</lugar>
+ </ubicacion>
+ <asistentes>
+    <asistente>
+        <nombre>Laura García</nombre>
+        <email>laura.garcia@email.com</email>
+    </asistente>
+    <asistente>
+        <nombre>Carlos Ruiz</nombre>
+        <email>carlos.ruiz@email.com</email>
+    </asistente>
+ </asistentes>
+</evento>

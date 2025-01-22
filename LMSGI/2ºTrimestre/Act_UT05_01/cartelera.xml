@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cartelera [
+    <!ELEMENT cartelera (película+)>
+    <!ELEMENT película (título, título_original?, nacionalidad, género, (clasificación | sin_clasificar), sinopsis, director, reparto, web?, cartel?)>
+    <!ELEMENT película(código,duración,año)>
+        <!ELEMENT codigo (#PCDATA)> 
+        <!ELEMENT duracion (#PCDATA)> 
+        <!ELEMENT año (#PCDATA)> 
+    <!ELEMENT título (#PCDATA)>
+    <!ELEMENT título_original (#PCDATA)>
+    <!ELEMENT nacionalidad (#PCDATA)>
+    <!ELEMENT género (#PCDATA)>
+    <!ELEMENT clasificación EMPTY>
+    <!ATTLIST clasificación edad (8,12,16,18) >
+    <!ELEMENT sin_clasificar EMPTY>
+    <!ELEMENT sinopsis (#PCDATA)>
+    <!ELEMENT director (#PCDATA)>
+    <!ELEMENT reparto (actor+)> 
+    <!ELEMENT actor (#PCDATA)>
+    <!ELEMENT web (#PCDATA)>
+    <!ELEMENT cartel (#PCDATA)>
+]>
+<cartelera>
+    <película código="p1" duración="152" año="2002">
+        <título>AQUELLAS JUERGAS UNIVERSITARIAS</título>
+        <título_original>Old School</título_original>
+        <nacionalidad>Estados Unidos</nacionalidad>
+        <género>Comedia</género>
+        <clasificación edad="tp" />
+        <sinopsis> Mitch, Frank y Beanie son tres amigos treintañeros cuyas vidas no son exactamente lo que esperaban. Mitch tiene una novia ninfómana que se mete en la cama con el primero que agarra. Frank se ha casado y su matrimonio nada tiene que ver con las juergas salvajes que organizaban años atrás. </sinopsis>
+        <director>Todd Philips</director>
+        <reparto>
+            <actor>Luke Wilson</actor>
+            <actor>Will Farrel</actor>
+            <actor>Vince Vaughn</actor>
+        </reparto>
+        <web>http://www.uip.es</web>
+        <cartel>caratulas/Aquellas juergas.jpg</cartel>
+    </película>
+    <película código="p17" duración="106">
+        <título>EL ORO DE MOSCÚ</título>
+        <nacionalidad>España</nacionalidad>
+        <género>Comedia</género>
+        <sin_clasificar />
+        <sinopsis> Por una extraña coincidencia del destino, alguien recibe una información extraconfidencial de un anciano en sus últimos segundos de vida: el secreto mejor guardado de la Historia. El receptor, un trabajador de hospital, se lo comunica secretamente a un supuesto amigo. Ambos inician una aventura rocambolesca y llena de misterio. </sinopsis>
+        <director>Jesús Bonilla</director>
+        <reparto>
+            <actor>Jesús Bonilla</actor>
+            <actor>Santiago Segura</actor>
+            <actor>Alfredo Landa</actor>
+            <actor>Concha Velasco</actor>
+            <actor>Antonio Resines</actor>
+            <actor>Gabino Diego, María Barranco</actor>
+            <actor>María Barranco</actor>
+        </reparto>
+    </película>
+</cartelera>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filmoteca xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+    xs:noNamespaceSchemaLocation="filmoteca.xsd">
+  <pelicula codigo='p0001'>
+    <titulo idioma="es">Cinema Paradiso</titulo>
+    <director>Giuseppe Tornatore</director>
+    <anyo>1988</anyo>
+    <nacionalidad>Italia</nacionalidad>
+  </pelicula>
+  <pelicula codigo='p0002'>
+    <titulo idioma="es">Forrest Gump</titulo>
+    <director>Robert Zemeckis</director>
+    <anyo>1994</anyo>
+    <nacionalidad>EEUU</nacionalidad>
+  </pelicula>
+  <pelicula codigo='p0003'>
+    <titulo idioma="es">Días de fútbol</titulo>
+    <titulo idioma="en">Soccer days</titulo>
+    <director>David Serrano</director>
+    <anyo>2003</anyo>
+    <nacionalidad>España</nacionalidad>
+  </pelicula>
+</filmoteca>
