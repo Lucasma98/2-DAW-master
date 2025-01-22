@@ -19,6 +19,14 @@ addCity(newCity:any){
   this.citiesSrvc.addCity(newCity)
 }
 
+  isAlreadyInCities(aCity:any){
+    return this.citiesSrvc.isAlreadyInMyCities(aCity) //se le pone return, porque esta esperando un true o un false
+  }
+
+  getResults(){
+    return this.results
+  }
+
   searchByName(pattern:string) {
     //pedir datos al servidor
     this.apiSrvc.searchByName(pattern).subscribe(
@@ -31,8 +39,6 @@ addCity(newCity:any){
 
   }
 
-  getResults(){
-    return this.results
-  }
+  
 
 }

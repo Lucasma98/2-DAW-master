@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class CitiesService {
 
   private cities:any[] = []
+  private cityAtHome:any = {}
 
   constructor() { }
 
@@ -14,14 +15,24 @@ export class CitiesService {
       this.cities.push(newCity)
     }
   }
+  deleteCity(aCity:any){ //aCity porque borras una ciudad
+    this.cities = this.cities.filter( c => c.id != aCity.id)
+  }
 
   getCities() {
     return this.cities
   }
 
+  getCityAtHome(){
+    return this.cityAtHome
+  }
+
+  setCityAtHome(aCity:any){
+    this.cityAtHome = aCity
+  }
+
   isAlreadyInMyCities(aCity:any){ //aqui comprueba el id
     return this.cities.find (c => c.id == aCity.id)
   }
-
 
 }
