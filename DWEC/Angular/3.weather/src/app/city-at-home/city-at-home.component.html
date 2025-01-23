@@ -1,1 +1,9 @@
-<p>city-at-home works!</p>
+<!--esta es la carta del home-->
+
+City: {{getCityAtHome().name}}
+<br>
+Country: {{getCityAtHome().sys.country | countryCode}}
+<br>
+Temperature: {{getCityAtHome().main.temp | temp:1}} 
+<br>
+Icon: <img src="http://openweathermap.org/img/wn/{{getCityAtHome().weather[0].icon}}@2x.png">

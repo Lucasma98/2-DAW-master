@@ -1,9 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { CitiesService } from '../cities.service';
+import { TempPipe } from '../temp.pipe';
+import { CountryCodePipe } from '../country-code.pipe';
 
 @Component({
   selector: 'app-city-card',
-  imports: [],
+  imports: [TempPipe, CountryCodePipe],
   templateUrl: './city-card.component.html',
   styles: ``
 })

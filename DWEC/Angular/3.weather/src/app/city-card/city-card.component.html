@@ -1,8 +1,8 @@
 <div class="card text-center bg-light mb-2 mr-2">
     <div class="card-body">
       <h5 class="card-title"> {{city.name}}  <!-- AQUI VA EL NOMBRE --> </h5>
-      <p class="card-text"> {{city.sys.country}} <!-- AQUI VA EL PAIS O EL CODIGO DEL PAIS -->  </p>
-      <p class="card-text"> {{city.main.temp}} ºC  <!-- AQUI VA LA TEMPERATURA -->  </p>
+      <p class="card-text"> {{city.sys.country | countryCode}} <!-- AQUI VA EL PAIS O EL CODIGO DEL PAIS -->  </p>
+      <p class="card-text"> {{city.main.temp | temp}} <!-- AQUI VA LA TEMPERATURA -->  </p>
       <p>
         <!-- AQUÍ VA EL BOTON DE FAVORITA -->
         <button (click)="deleteCity()" type="button" class="btn btn-outline-secondary" style="border-style: none;">
