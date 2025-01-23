@@ -1,0 +1,52 @@
+{
+    "editoriales": 
+    [
+      {
+        "nombre": "Editorial Alfa",
+        "direccion": "Calle Mayor 123, Madrid, España",
+        "email": "contacto@editorialalfa.com",
+        "pagina_web": "https://www.editorialalfa.com",
+        "telefono": "+34 910 123 456",
+        "fax": "+34 910 123 457",
+        "libros": 
+        [   
+          {
+            "titulo": "El misterio del faro",
+            "autor": "Juan Pérez",
+            "fecha": "2021-05-15",
+            "isbn": "978-3-16-148410-0"
+          },
+          {
+            "titulo": "Las sombras de la ciudad",
+            "autor": "Laura Gómez",
+            "fecha": "2020-10-10",
+            "isbn": "978-3-16-148411-7"
+          }
+        ]
+      },
+      {
+        "nombre": "Editorial Beta",
+        "direccion": "Avenida del Prado 45, Barcelona, España",
+        "email": "info@editorialbeta.com",
+        "pagina_web": "https://www.editorialbeta.com",
+        "telefono": "+34 930 456 789",
+        "fax": "+34 930 456 788",
+        "libros": 
+        [
+          {
+            "titulo": "Cómo sobrevivir en la montaña",
+            "autor": "Carlos Ruiz",
+            "fecha": "2019-08-20",
+            "isbn": "978-3-16-148412-4"
+          },
+          {
+            "titulo": "Recetas del mundo",
+            "autor": "Ana Martínez",
+            "fecha": "2022-03-12",
+            "isbn": "978-3-16-148413-1"
+          }
+        ]
+      }
+    ]
+  }
+  

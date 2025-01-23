@@ -1,0 +1,68 @@
+{
+    "personas": 
+    [
+      {
+          "nombre": "Luis",
+        "apellidos": "Fernández Pérez",
+        "fecha_nacimiento": "1990-04-15",
+        "edad": 34,
+        "direccion": 
+        [
+          {
+            "tipo": "principal",
+            "nombre": "Calle Luna",
+            "numero": 12,
+            "ampliacion": "Piso 2, Puerta B",
+            "poblacion": "Madrid",
+            "provincia": "Madrid"
+          },
+          {
+            "tipo": "secundaria",
+            "nombre": "Calle Sol",
+            "numero": 45,
+            "ampliacion": "Chalet 7",
+            "poblacion": "Alcobendas",
+            "provincia": "Madrid"
+          }
+        ],
+        "idiomas": ["Español", "Inglés"]
+      },
+      {
+        "nombre": "María",
+        "apellidos": "García López",
+        "fecha_nacimiento": "1985-09-30",
+        "edad": 39,
+        "direccion": 
+        [
+          {
+            "tipo": "principal",
+            "nombre": "Avenida Sol",
+            "numero": 45,
+            "ampliacion": "Edificio Las Flores, Piso 3",
+            "poblacion": "Barcelona",
+            "provincia": "Barcelona"
+          }
+        ],
+        "idiomas": ["Español"]
+      },
+      {
+        "nombre": "Carlos",
+        "apellidos": "Martínez Sánchez",
+        "fecha_nacimiento": "2000-01-20",
+        "edad": 25,
+        "direccion": 
+        [
+          {
+            "tipo": "principal",
+            "nombre": "Plaza Estrella",
+            "numero": 5,
+            "ampliacion": "Apartamento 1A",
+            "poblacion": "Valencia",
+            "provincia": "Valencia"
+          }
+        ],
+        "idiomas": ["Español", "Francés"]
+      }
+    ]
+}
+  
