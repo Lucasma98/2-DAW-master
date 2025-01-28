@@ -37,8 +37,14 @@ export class CitiesService {
     this.saveAll()
   }
 
+  updateCity(updateCity:any){
+    let position = this.cities.findIndex(c => c.id == updateCity.id)
+    this.cities[position] = updateCity
+  }
+
   isAlreadyInMyCities(aCity:any){ //aqui comprueba el id
     return this.cities.find (c => c.id == aCity.id)
+    
   }
 
   saveAll(){

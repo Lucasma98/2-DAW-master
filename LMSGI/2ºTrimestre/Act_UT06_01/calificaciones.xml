@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="calificaciones_a.xsl"?>
+
+<calificaciones>
+    <parametros>
+        <orden>modulo</orden>
+        <css>1</css>
+    </parametros>    
+    <calificacion>
+        <nombre>Juan</nombre>
+        <apellidos>Martinez Azorin</apellidos>
+        <modulo>DAW</modulo>
+        <curso>2</curso>
+        <convocatoria>Marzo</convocatoria>
+        <nota>5</nota>
+    </calificacion>
+
+    <calificacion>
+        <nombre>Pepe</nombre>
+        <apellidos>Perez Soriano</apellidos>
+        <modulo>DAW</modulo>
+        <curso>1</curso>
+        <convocatoria>Marzo</convocatoria>
+        <nota>10</nota>
+    </calificacion>
+
+    <calificacion>
+        <nombre>Antonio</nombre>
+        <apellidos>Juan Hernandez</apellidos>
+        <modulo>DAW</modulo>
+        <curso>1</curso>
+        <convocatoria>Junio</convocatoria>
+        <nota>5</nota>
+    </calificacion>
+
+    <calificacion>
+        <nombre>Maria</nombre>
+        <apellidos>Carpena Vidal</apellidos>
+        <modulo>Enfermeria</modulo>
+        <curso>2</curso>
+        <convocatoria>Junio</convocatoria>
+        <nota>9</nota>
+    </calificacion>
+
+    <calificacion>
+        <nombre>Manuela</nombre>
+        <apellidos>Chirlaque Toral</apellidos>
+        <modulo>Electricidad</modulo>
+        <curso>2</curso>
+        <convocatoria>Marzo</convocatoria>
+        <nota>9</nota>
+    </calificacion>
+
+    <calificacion>
+        <nombre>Amadis</nombre>
+        <apellidos>Gonzalez Martinez</apellidos>
+        <modulo>ASIR</modulo>
+        <curso>2</curso>
+        <convocatoria>Junio</convocatoria>
+        <nota>10</nota>
+    </calificacion>
+
+    <calificacion>
+        <nombre>Emma</nombre>
+        <apellidos>Carpena Baello</apellidos>
+        <modulo>Jardineria</modulo>
+        <curso>1</curso>
+        <convocatoria>Marzo</convocatoria>
+        <nota>4.1</nota>
+    </calificacion>
+
+    <calificacion>
+        <nombre>Lucas</nombre>
+        <apellidos>Candela Cutillas</apellidos>
+        <modulo>DAW</modulo>
+        <curso>2</curso>
+        <convocatoria>Marzo</convocatoria>
+        <nota>4.5</nota>
+    </calificacion>
+</calificaciones>

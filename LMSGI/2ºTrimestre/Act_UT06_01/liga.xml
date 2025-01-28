@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="liga_c.xsl" type="text/xsl"?>
+<liga>
+    <equipo>
+        <codigo>Equipo001</codigo>
+        <nombre>Abaran</nombre>
+        <entrenador>Alex Ferguson</entrenador>
+        <fundacion>1952</fundacion>
+        <presupuesto>1500000000000</presupuesto>
+    </equipo>
+   
+    <equipo>
+        <codigo>Equipo002</codigo>
+        <nombre>Blanca</nombre>
+        <entrenador>Vicente del Bosque</entrenador>
+        <fundacion>1948</fundacion>
+        <presupuesto>7200000</presupuesto>
+    </equipo>
+    
+
+    <equipo>
+        <codigo>Equipo003</codigo>
+        <nombre>Cieza</nombre>
+        <entrenador>Louis Van Gaal</entrenador>
+        <fundacion>1948</fundacion>
+        <presupuesto>19000000</presupuesto>
+    </equipo>
+ 
+
+    <equipo>
+        <codigo>Equipo004</codigo>
+        <nombre>Jumilla</nombre>
+        <entrenador>Arrigo Sacchi</entrenador>
+        <fundacion>1951</fundacion>
+        <presupuesto>3100000000</presupuesto>
+    </equipo>
+   
+    <equipo>
+        <codigo>Equipo005</codigo>
+        <nombre>Yecla</nombre>
+        <entrenador>Rafael Benitez</entrenador>
+        <fundacion>1925</fundacion>
+        <presupuesto>45000000000</presupuesto>
+    </equipo>
+ 
+</liga>

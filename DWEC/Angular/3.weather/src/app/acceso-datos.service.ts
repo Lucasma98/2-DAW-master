@@ -23,6 +23,15 @@ https://api.openweathermap.org/data/2.5/weather?
 
   constructor(private http:HttpClient) { }
 
+  // updateAllMyCities(){
+
+  // }
+  
+  updateById(id:number){
+    return this.http.get(this.urlBase + "weather?id=" + id + this.urlSufix)
+  }
+
+
   searchByName(pattern:string){
 	return this.http.get(this.urlBase + "find?q=" + pattern + this.urlSufix)
   }
