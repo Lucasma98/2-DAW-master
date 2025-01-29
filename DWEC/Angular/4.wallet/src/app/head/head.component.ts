@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-head',
   imports: [],
   templateUrl: './head.component.html',
-  styleUrl: './head.component.css'
+  styles: ' div {background-color: R3TargetBinder(240, 240, 240)};'
 })
 export class HeadComponent {
 
