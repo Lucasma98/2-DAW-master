@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet href="liga_c.xsl" type="text/xsl"?>
+<?xml-stylesheet href="liga_2c.xsl" type="text/xsl"?>
 <liga>
     <equipo>
         <codigo>Equipo001</codigo>
@@ -7,15 +7,16 @@
         <entrenador>Alex Ferguson</entrenador>
         <fundacion>1952</fundacion>
         <presupuesto>1500000000000</presupuesto>
-        
+        <puntos>23</puntos>
     </equipo>
    
     <equipo>
         <codigo>Equipo002</codigo>
         <nombre>Blanca</nombre>
         <entrenador>Vicente del Bosque</entrenador>
-        <fundacion>1948</fundacion>
+        <fundacion>1946</fundacion>
         <presupuesto>7200000</presupuesto>
+        <puntos>16</puntos>
     </equipo>
     
 
@@ -25,6 +26,7 @@
         <entrenador>Louis Van Gaal</entrenador>
         <fundacion>1948</fundacion>
         <presupuesto>19000000</presupuesto>
+        <puntos>20</puntos>
     </equipo>
  
 
@@ -34,6 +36,7 @@
         <entrenador>Arrigo Sacchi</entrenador>
         <fundacion>1951</fundacion>
         <presupuesto>3100000000</presupuesto>
+        <puntos>10</puntos>
     </equipo>
    
     <equipo>
@@ -42,6 +45,25 @@
         <entrenador>Rafael Benitez</entrenador>
         <fundacion>1925</fundacion>
         <presupuesto>45000000000</presupuesto>
+        <puntos>15</puntos>
+    </equipo>
+
+    <equipo>
+        <codigo>Equipo006</codigo>
+        <nombre>Plus Ultra</nombre>
+        <entrenador>Rafael Benitez</entrenador>
+        <fundacion>1965</fundacion>
+        <presupuesto>53000000000</presupuesto>
+        <puntos>45</puntos>
+    </equipo>
+
+    <equipo>
+        <codigo>Equipo007</codigo>
+        <nombre>Lorqui</nombre>
+        <entrenador>Vicente del Bosque</entrenador>
+        <fundacion>1972</fundacion>
+        <presupuesto>62000000000</presupuesto>
+        <puntos>24</puntos>
     </equipo>
  
 </liga>
