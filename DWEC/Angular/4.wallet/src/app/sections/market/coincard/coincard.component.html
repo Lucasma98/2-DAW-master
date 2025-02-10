@@ -1,0 +1,8 @@
+<div class="card text-center bg-light pt-2 pr-2 mb-2 mr-2">
+	<img src="https://www.coinlore.com/img/50x50/{{coin.nameid}}.png" class="mx-auto" width="50px" height="50px">
+	<div class="card-body">
+		<h5 class="card-title">{{coin.name}} ({{coin.symbol}})</h5>
+		<p class="card-text fw-bold"> ${{coin.price_usd}} </p>
+    <button (click)="addToWallet(coin)" class="btn btn-outline-primary">Add to wallet</button>
+	</div>
+</div>

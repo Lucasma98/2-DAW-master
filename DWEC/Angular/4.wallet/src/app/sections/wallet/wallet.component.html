@@ -1,0 +1,60 @@
+<h2>Portfolio</h2>
+
+<figure>
+  <blockquote class="blockquote">
+    <h3></h3>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    Total balance
+  </figcaption>
+</figure>
+
+<div class="row">
+  <table class="table table-sm table-striped align-middle">
+    <thead>
+      <tr>
+        <th scope="col" width="5%" class="text-end"></th>
+        <th scope="col" width="20%">Asset</th>
+        <th scope="col" width="15%" class="text-end">Balance</th>
+        <th scope="col" width="15%" class="text-end">Price</th>
+        <th scope="col" width="15%" class="text-end">Quantity</th>
+        <th scope="col" width="15%" class="text-end">Conversions</th>
+        <th scope="col" width="15%" class="text-end">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (coin of getWalletAssets(); track $index) {
+        <tr>
+          <td scope="col" class="text-end">
+            <!-- AQUÍ EL LOGO -->
+            <img src="https:/www.coinlore.com/img/50x50/{{coin.nameid}}.png" width="50px" height="50px">
+          </td>
+          <td scope="col">
+            <!-- AQUÍ EL NOMBRE Y EL ID -->
+             {{coin.name}} ({{coin.symbol}})
+          </td>
+          <td scope="col" class="text-end">
+            <!-- AQUÍ EL VALOR TOTAL DE CADA MONEDA -->
+          </td>
+          <td scope="col" class="text-end">
+            <!-- AQUÍ EL PRECIO DE LA MONEDA -->
+             {{coin.price_usd}} $
+          </td>
+          <td scope="col" class="text-end">
+            <app-asset-quantity [coin]="coin"></app-asset-quantity>
+          </td>
+          <td scope="col" class="text-end">
+            <!-- AQUÍ EL VALOR CONVERTIDO A EUROS -->
+          </td>
+          <td scope="col" class="text-end">
+          <app-asset-actions></app-asset-actions>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
+
+<div class="row">
+  <button class="btn btn-primary btn-lg">REFRESH</button>
+</div>
