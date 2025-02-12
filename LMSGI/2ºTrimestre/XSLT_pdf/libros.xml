@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="libros.xsl"?>
+<biblioteca>
+ <libro>
+ <titulo>El señor de los anillos</titulo>
+ <autor>J.R.R. Tolkien</autor>
+ </libro>
+ <libro>
+ <titulo>Cien años de soledad</titulo>
+ <autor>Gabriel García Márquez</autor>
+ </libro>
+ <libro>
+ <titulo>1984</titulo>
+ <autor>George Orwell</autor>
+ </libro>
+ <libro>
+ <titulo>Rebelión en la granja</titulo>
+ <autor>George Orwell</autor>
+ </libro>
+ <libro>
+ <titulo>Don Quijote de la Mancha</titulo>
+ <autor>Miguel de Cervantes</autor>
+ </libro>
+ <libro>
+ <titulo>La metamorfosis</titulo>
+ <autor>Franz Kafka</autor>
+ </libro>
+ <libro>
+ <titulo>Fahrenheit 451</titulo>
+ <autor>Ray Bradbury</autor>
+ </libro>
+ <libro>
+ <titulo>El principito</titulo>
+ <autor>Antoine de Saint-Exupéry</autor>
+ </libro>
+ <libro>
+ <titulo>Las aventuras de Sherlock Holmes</titulo>
+ <autor>Arthur Conan Doyle</autor>
+ </libro>
+</biblioteca>

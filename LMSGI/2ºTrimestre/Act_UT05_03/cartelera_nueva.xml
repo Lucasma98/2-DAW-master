@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cartelera>
+    <película>
+        <título>AQUELLAS JUERGAS UNIVERSITARIAS</título>
+        <título_original>Old School</título_original>
+        <nacionalidad>Estados Unidos</nacionalidad>
+        <género>Comedia</género>
+        <clasificación>
+            <_edad>tp</_edad>
+        </clasificación>
+        <sinopsis>Mitch, Frank y Beanie son tres amigos treintañeros cuyas vidas no son
+  exactamente lo que esperaban. Mitch tiene una novia ninfómana que se mete en
+ la cama con el primero que agarra. Frank se ha casado y su matrimonio nada
+   tiene que ver con las juergas salvajes que organizaban años atrás. Y Beanie es
+   un padre de familia que se muere por recuperar su alocada juventud. Pero las
+   cosas cambian cuando Beanie sugiere que creen su propia fraternidad, en la
+   nueva casa que Mitch tiene junto al campus de la universidad. Una ocasión para
+   revivir tiempos gloriosos, hacer nuevos amigos y de volver a sus viejas,
+   salvajes y desmadradas juergas de estudiantes.</sinopsis>
+        <director>Todd Philips</director>
+        <reparto>
+            <actor>
+                <nombre>Will</nombre>
+                <apellidos>Ferrell</apellidos>
+                <fechaNacimiento>1967-07-16</fechaNacimiento>
+            </actor>
+            <actor>
+                <nombre>Luke</nombre>
+                <apellidos>Wilson</apellidos>
+                <fechaNacimiento>1971-09-21</fechaNacimiento>
+            </actor>
+            <actor>
+                <nombre>Vince</nombre>
+                <apellidos>Vaughn</apellidos>
+                <fechaNacimiento>1970-03-28</fechaNacimiento>
+            </actor>
+        </reparto>
+        <web>http://www.uip.es</web>
+        <cartel>caratulas/Aquellas juergas.jpg</cartel>
+        <_código>1</_código>
+        <_duración>152</_duración>
+        <_año>2002</_año>
+    </película>
+    <película>
+        <título>EL ORO DE MOSCÚ</título>
+        <nacionalidad>España</nacionalidad>
+        <género>Comedia</género>
+        <sin_clasificar></sin_clasificar>
+        <sinopsis>Por una extraña coincidencia del destino, alguien recibe una información
+   extraconfidencial de un anciano en sus últimos segundos de vida: el secreto
+   mejor guardado de la Historia. El receptor, un trabajador de hospital, se lo
+   comunica secretamente a un supuesto amigo. Ambos inician una aventura
+   rocambolesca y llena de misterio. Ante la inutilidad de sus intentos y muy a
+   su pesar, tienen que recurrir a otras personas que asimismo van cayendo en el
+   pozo sin fondo que conlleva descifrar el enigma.</sinopsis>
+        <director>Jesús Bonilla</director>
+        <reparto>
+            <actor>
+                <nombre>Jesús</nombre>
+                <apellidos>Bonilla</apellidos>
+                <fechaNacimiento>1955-09-01</fechaNacimiento>
+            </actor>
+            <actor>
+                <nombre>Santiago</nombre>
+                <apellidos>Segura</apellidos>
+                <fechaNacimiento>1965-07-17</fechaNacimiento>
+            </actor>
+            <actor>
+                <nombre>Alfredo</nombre>
+                <apellidos>Landa</apellidos>
+                <fechaNacimiento>1933-03-03</fechaNacimiento>
+            </actor>
+            <actor>
+                <nombre>Concha</nombre>
+                <apellidos>Velasco</apellidos>
+                <fechaNacimiento>1939-11-29</fechaNacimiento>
+            </actor>
+        </reparto>
+        <_código>17</_código>
+        <_duración>06</_duración>
+    </película>
+    <_xmlns_xsi>http://www.w3.org/2001/XMLSchema-instance</_xmlns_xsi>
+    <_xsi_noNamespaceSchemaLocation>XMLSchemaAvanzados06_cartelera.xsd</_xsi_noNamespaceSchemaLocation>
+</cartelera>

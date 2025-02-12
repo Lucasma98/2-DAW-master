@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="4.xsl"?>
+<empleados>
+ <empleado>
+ <nombre>Ana</nombre>
+ <puesto>Desarrolladora</puesto>
+ </empleado>
+ <empleado>
+ <nombre>Juan</nombre>
+ <puesto>Diseñador</puesto>
+ </empleado>
+ <empleado>
+ <nombre>María</nombre>
+ <puesto>Analista de Datos</puesto>
+ </empleado>
+ <empleado>
+ <nombre>Carlos</nombre>
+ <puesto>Administrador de Sistemas</puesto>
+ </empleado>
+ <empleado>
+ <nombre>Elena</nombre>
+ <puesto>Gerente de Proyectos</puesto>
+ </empleado>
+</empleados>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="7.xsl" type="text/xsl"?>
+<biblioteca>
+ <libro>
+  <titulo>El señor de los anillos</titulo>
+  <autor>J.R.R. Tolkien</autor>
+  <resumen>Una de las novelas de fantasía más influyentes de la historia, sigue la aventura de Frodo Bolsón y la Comunidad del Anillo en su misión de destruir el Anillo Único y vencer a Sauron. Una épica historia de amistad, valentía y lucha contra el mal en la Tierra Media.</resumen>
+ </libro>
+ <libro>
+  <titulo>Cien años de soledad</titulo>
+  <autor>Gabriel García Márquez</autor>
+  <resumen>Obra maestra del realismo mágico que narra la historia de la familia Buendía a lo largo de varias generaciones en el pueblo ficticio de Macondo. Llena de simbolismo, tragedia y elementos fantásticos, explora el destino y la soledad a través de la historia de Latinoamérica.</resumen>
+ </libro>
+ <libro>
+  <titulo>1984</titulo>
+  <autor>George Orwell</autor>
+  <resumen>Novela distópica que presenta un mundo totalitario donde el gobierno, liderado por el Gran Hermano, controla todos los aspectos de la vida. Sigue a Winston Smith en su lucha contra la opresión y la manipulación de la verdad, mostrando un futuro aterrador de vigilancia y represión.</resumen>
+ </libro>
+ <libro>
+  <titulo>Rebelión en la granja</titulo>
+  <autor>George Orwell</autor>
+  <resumen>Una fábula política que narra cómo los animales de una granja se rebelan contra los humanos y crean su propia sociedad, solo para ver cómo el poder corrompe a sus líderes. Alegoría de la Revolución Rusa y crítica a los regímenes totalitarios.</resumen>
+ </libro>
+ <libro>
+  <titulo>Don Quijote de la Mancha</titulo>
+  <autor>Miguel de Cervantes</autor>
+  <resumen>La historia de un hidalgo que enloquece tras leer demasiados libros de caballería y decide convertirse en caballero andante. Acompañado por su fiel escudero, Sancho Panza, vive delirantes aventuras mientras enfrenta la realidad y la fantasía. Considerada la primera novela moderna.</resumen>
+ </libro>
+ <libro>
+  <titulo>La metamorfosis</titulo>
+  <autor>Franz Kafka</autor>
+  <resumen>Un relato perturbador sobre Gregor Samsa, un hombre que un día despierta convertido en un insecto gigante. A través de esta historia surrealista, Kafka explora el aislamiento, la incomprensión y la alienación en la sociedad.</resumen>
+ </libro>
+ <libro>
+  <titulo>Fahrenheit 451</titulo>
+  <autor>Ray Bradbury</autor>
+  <resumen>Un clásico de la ciencia ficción distópica que imagina un futuro donde los libros están prohibidos y los bomberos tienen la tarea de quemarlos. Guy Montag, uno de estos bomberos, comienza a cuestionar su mundo, en un relato que reflexiona sobre la censura y el poder del conocimiento.</resumen>
+ </libro>
+ <libro>
+  <titulo>El principito</titulo>
+  <autor>Antoine de Saint-Exupéry</autor>
+  <resumen>Un cuento filosófico y poético sobre un pequeño príncipe que viaja por distintos planetas, descubriendo las contradicciones y absurdos del mundo adulto. Una historia llena de enseñanzas sobre la amistad, el amor y la esencia de la vida.</resumen>
+ </libro>
+ <libro>
+  <titulo>Las aventuras de Sherlock Holmes</titulo>
+  <autor>Arthur Conan Doyle</autor>
+  <resumen>Una colección de relatos protagonizados por el detective más famoso del mundo, Sherlock Holmes, y su leal amigo, el Dr. Watson. Usando la lógica y la observación, Holmes resuelve misterios complejos en la Londres victoriana.</resumen>
+ </libro>
+</biblioteca>

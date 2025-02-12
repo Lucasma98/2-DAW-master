@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="menu_restaurante.xsl"?>
+<menu>
+ <categoria nombre="Entrantes">
+ <plato precio="6">Bruschetta</plato>
+ <plato precio="7">Ensalada César</plato>
+ <plato precio="5">Sopa de cebolla</plato>
+ <plato precio="6">Croquetas de jamón</plato>
+ </categoria>
+ <categoria nombre="Ensaladas">
+ <plato precio="7">Ensalada Caprese</plato>
+ <plato precio="8">Ensalada de quinoa</plato>
+ <plato precio="9">Ensalada de espinacas y nueces</plato>
+ <plato precio="7">Ensalada griega</plato>
+ </categoria>
+ <categoria nombre="Principales">
+ <plato precio="12">Pollo asado con patatas</plato>
+ <plato precio="10">Pasta carbonara</plato>
+ <plato precio="11">Lasaña boloñesa</plato>
+ <plato precio="14">Salmón a la parrilla</plato>
+ </categoria>
+ <categoria nombre="Postres">
+ <plato precio="6">Tarta de queso</plato>
+ <plato precio="7">Tiramisú</plato>
+ <plato precio="5">Flan de caramelo</plato>
+ <plato precio="8">Brownie con helado</plato>
+ </categoria>
+</menu>

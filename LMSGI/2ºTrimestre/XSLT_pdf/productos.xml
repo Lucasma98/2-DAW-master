@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="productos3.xsl"?>
+<productos>
+ <producto>
+ <nombre>Monitor</nombre>
+ <precio>200</precio>
+ </producto>
+ <producto>
+ <nombre>Ratón</nombre>
+ <precio>15</precio>
+ </producto>
+ <producto>
+ <nombre>Portátil</nombre>
+ <precio>500</precio>
+ </producto>
+ <producto>
+ <nombre>Teclado</nombre>
+ <precio>30</precio>
+ </producto>
+</productos>
