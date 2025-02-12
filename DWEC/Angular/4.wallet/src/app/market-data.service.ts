@@ -21,10 +21,11 @@ export class MarketDataService {
 
   }
 
+    ConvertUSDToEUR() {
 
+    return this.http.get(this.urlBase + "ticker/?id=111393")
 
-
-
+  }
 
 
 }

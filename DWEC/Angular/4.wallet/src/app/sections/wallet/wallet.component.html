@@ -26,29 +26,27 @@
       @for (coin of getWalletAssets(); track $index) {
         <tr>
           <td scope="col" class="text-end">
-            <!-- AQUÍ EL LOGO -->
-            <img src="https:/www.coinlore.com/img/50x50/{{coin.nameid}}.png" width="50px" height="50px">
-          </td>
-          <td scope="col">
-            <!-- AQUÍ EL NOMBRE Y EL ID -->
-             {{coin.name}} ({{coin.symbol}})
-          </td>
-          <td scope="col" class="text-end">
-            <!-- AQUÍ EL VALOR TOTAL DE CADA MONEDA -->
-          </td>
-          <td scope="col" class="text-end">
-            <!-- AQUÍ EL PRECIO DE LA MONEDA -->
-             {{coin.price_usd}} $
-          </td>
-          <td scope="col" class="text-end">
-            <app-asset-quantity [coin]="coin"></app-asset-quantity>
-          </td>
-          <td scope="col" class="text-end">
-            <!-- AQUÍ EL VALOR CONVERTIDO A EUROS -->
-          </td>
-          <td scope="col" class="text-end">
-          <app-asset-actions></app-asset-actions>
-          </td>
+            <img src="https://www.coinlore.com/img/50x50/{{coin.nameid}}.png" class="mx-auto" width="50px" height="50px" />
+                
+                </td>
+                <td scope="col">
+                    {{coin.name}} ({{coin.symbol}})
+                </td>
+                <td scope="col" class="text-end">
+                    {{coin.price_usd * coin.quantity}} $
+                </td>
+                <td scope="col" class="text-end">
+                  {{coin.price_usd}} $
+                </td>
+                <td scope="col" class="text-end">
+                    <app-asset-quantity [coin] = "coin"></app-asset-quantity>
+                </td>
+                <td scope="col" class="text-end">
+                  {{coin.price_usd * coin.quantity | conversionEUR}} €
+                </td>
+                <td scope="col" class="text-end">
+                    <app-asset-actions [coin] = "coin"></app-asset-actions>
+                </td>
         </tr>
       }
     </tbody>

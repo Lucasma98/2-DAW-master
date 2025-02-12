@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { MarketDataService } from '../../market-data.service';
 import { CoincardComponent } from "./coincard/coincard.component";
+import { FilterByStringPipe } from '../../filter-by-string.pipe';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-market',
-  imports: [CoincardComponent,],
+  imports: [CoincardComponent, FilterByStringPipe, FormsModule],
   templateUrl: './market.component.html',
   styles: ``
 })
@@ -16,16 +18,17 @@ export class MarketComponent {
   }
 
   private coins:any[] = []
+    pattern:string = ""
 
   getMarketData(){
    this.MarketService.getMarketData().subscribe(
-    json => { 
+    json => {
 
       let moneda:any = json
       this.coins = moneda.data
     }
   )
-  
+
   }
 
   getCoins(){
@@ -48,6 +51,10 @@ export class MarketComponent {
     }
 
     return coinsFiltradas
+  }
 
+  getPattern(){
+    return this.pattern
   }
 }
+

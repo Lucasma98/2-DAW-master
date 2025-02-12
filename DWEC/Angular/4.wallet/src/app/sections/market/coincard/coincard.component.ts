@@ -11,12 +11,16 @@ export class CoincardComponent {
 
   @Input() coin: any;
 
-  constructor(private walletSrvc: WalletService){
+    constructor(private WalletSrvc: WalletService){
 
-  }
+    }
 
-  addToWallet(coin:any){
-    this.walletSrvc.addToWallet(coin)
-  }
+    addToWallet(coin: any){
+      this.WalletSrvc.addToWallet(this.coin)
+    }
+
+    isAlreadyInWallet(coin: any){
+       return this.WalletSrvc.isAlredyInWallet(coin)
+    }
 
 }
