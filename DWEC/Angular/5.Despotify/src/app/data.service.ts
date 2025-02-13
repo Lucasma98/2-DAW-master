@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { DespotifyService } from './despotify.service';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -20,7 +19,7 @@ export class DataService {
   }
   getartistas() {
     return this.artistas
-  } 
+  }
 
   getSongsService() {
     this.despotifyServicie.getSongs().subscribe(json => {
@@ -35,8 +34,5 @@ export class DataService {
       this.artistas = artista
     })
   }
-
-
-
 
 }
