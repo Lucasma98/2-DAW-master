@@ -1,0 +1,8 @@
+<div class="input-group mb-3">
+  <input  #Search (keyup.enter)="consultarDatos(Search.value)" type="text" class="form-control" placeholder="search by movie..."
+      aria-label="search by movie..." aria-describedby="basic-addon2">
+</div>
+
+@for (m of movies; track $index) {
+  <app-card-movie [movie]="m" />
+}

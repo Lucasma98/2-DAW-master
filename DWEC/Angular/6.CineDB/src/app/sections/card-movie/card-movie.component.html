@@ -1,0 +1,14 @@
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src={{movie.Poster}} alt="{{movie.Title}}">
+    <div class="card-body">
+      <h5 class="card-title">{{movie.Title}}</h5>
+      <p class="card-text">{{movie.Year}}</p>
+      <p class="card-text">{{movie.Type}}</p>
+      <button [routerLink]="['/details', movie.Title]"  class="btn btn-primary">Details</button>
+      @if (!isAlredyInFavourites(movie)) {
+        <button (click)="addToFavourite(movie)" class="btn btn-success">Add Favourite</button>
+      }@else {
+        <button (click)="removeFromFavourite(movie)" class="btn btn-danger">Remove Favourite</button>
+      }
+    </div>
+</div>
