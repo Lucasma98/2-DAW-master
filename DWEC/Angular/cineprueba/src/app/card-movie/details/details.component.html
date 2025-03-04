@@ -1,0 +1,52 @@
+
+<div class="row">
+    <div class="col-7">
+        <dl>
+            <dt>Título</dt>
+            <dd>{{peli.Title}}</dd>
+        </dl>
+        <dl>
+            <dt>Año</dt>
+            <dd>{{peli.Year}}</dd>
+        </dl>
+        <dl>
+            <dt>Duración</dt>
+            <dd>{{peli.Runtime}}</dd>
+        </dl>
+        <dl>
+            <dt>Géneros</dt>
+            <dd>{{peli.Genre}}</dd>
+        </dl>
+        <dl>
+            <dt>Dirección</dt>
+            <dd>{{peli.Directos}}</dd>
+        </dl>
+        <dl>
+            <dt>Reparto</dt>
+            <dd>{{peli.Actors}}</dd>
+        </dl>
+        <dl>
+            <dt>Sinopsis</dt>
+            <dd>{{peli.Plot}}</dd>
+        </dl>
+        <dl>
+            <dt>País</dt>
+            <dd>{{peli.Country}}</dd>
+        </dl>
+        <dl>
+            <dt>Enlace a IMDB</dt>
+            <dd><a href="enlace_a_la_peli_en_IMDB" target="_blank">{{peli.Title }} en IMDB</a></dd>
+        </dl>
+        <dl>
+            <dt>Puntuación de IMDB</dt>
+            <dd>{{peli.imdbRating}}</dd>
+        </dl>
+        
+        <p>
+            <button [routerLink]="['/favorites']" type="button" class="btn btn-primary">Volver a Favoritos</button>
+        </p>
+    </div>
+    <div class="col-5">
+        <img src="{{peli.Poster}}" class="card-img-top">
+    </div>
+</div>
