@@ -41,7 +41,7 @@ export class RecommendComponent {
 
     usuarioSeleccionado(value: any) {
       const usuarioseleccionado = this.getusuarios().find(usuario => usuario.id == value);
-      if{(usuarioseleccionado) {
+      if(usuarioseleccionado) {
         this.dataService.setusrecomendado(usuarioseleccionado);
       }
       else{
@@ -49,4 +49,7 @@ export class RecommendComponent {
       }
       }
     }
-}
+    addRecomendacion(){
+      this.dataService.addRecomendacion()
+    }
+

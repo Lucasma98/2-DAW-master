@@ -33,7 +33,18 @@
         </tr>
       </thead>
       <tbody>
+
+
         <!-- AQUI CODIGO ANGULAR -->
+        @for (recomendacion of getRecomendacionToUser(); track $index) {
+        <tr>
+          <td>{{recomendacion.pelicula.Title}}</td>
+          <td>{{recomendacion.pelicula.Genre}}</td>
+          <td>{{recomendacion.pelicula.Year}}</td>
+          <td>{{recomendacion.Rating}}</td>
+          <td>{{recomendacion.usrecomendado.name}}</td>
+          <td><button type="button" class="btn btn-primary">Accept</button></td>
+          }
 
       </tbody>
     </table>
@@ -59,6 +70,18 @@
       </thead>
       <tbody>
         <!-- AQUI CODIGO ANGULAR -->
+        @for (recomendacion of getRecomendacionFromUser(); track $index) {
+        <tr>
+          <td>{{recomendacion.pelicula.Title}}</td>
+          <td>{{recomendacion.Genre}}</td>
+          <td>{{recomendacion.pelicula.Year}}</td>
+          <td>{{recomendacion.Rating}}</td>
+          <td>{{recomendacion.usuarioRecomendado.name}}</td>
+          <td>
+            <button type="button" class="btn btn-warning" >Delete</button>
+          </td>
+        </tr>
+        }
       </tbody>
     </table>
   </div>

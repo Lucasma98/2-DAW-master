@@ -16,6 +16,8 @@ export class DataServiceService {
   private pelicula: any;
   private datos: any[] = [];
   private usrecomendado: any = {id: 0 , name: "No se ha seleccionado un usuario"};
+  private usuario_recomiendo: any = {id: 0 , name: "No se ha seleccionado un usuario"};
+  private recomendaciones: any[] = [];
 
   //lista de usuarios
   getUsuariosdeApi() {
@@ -46,13 +48,44 @@ export class DataServiceService {
     this.pelicula = pelicula;
   }
 
-  //mostrar las recomendaciones
+  //mostrar al usuario
   getusrecomendado(){
     return this.usrecomendado;
   }
   setusrecomendado(usuario: any){
     this.usrecomendado = usuario;
   }
+
+  //mostrar al usuario que recomienda
+  getusuario_recomiendo(){
+    return this.usuario_recomiendo;
+  }
+  setusuario_recomiendo(usuario: any){
+    this.usuario_recomiendo = usuario;
+  }
+  addRecomendacion(recomendacion: any){
+    this.recomendaciones.push({
+      usrecomendado: this.usrecomendado,
+      usuario_recomiendo: this.usuario_recomiendo,
+      pelicula: this.pelicula
+    });
+    console.log(this.recomendaciones);
+  }
+
+  getRecomendacionFromUser() {
+    console.log(this.recomendaciones);
+    console.log(this.usrecomendado);
+    return this.recomendaciones.filter(recomendacion => recomendacion.usrecomendado.id === this.usrecomendado.id);
+  }
+
+  getRecomendacionToUser() {
+    console.log(this.recomendaciones);
+    console.log(this.usrecomendado)
+    return this.recomendaciones.filter(recomendacion => recomendacion.usuario_recomiendo.id === this.usrecomendado.id);
+  }
+
+
+
 
   //localstorage
   getdatos() {

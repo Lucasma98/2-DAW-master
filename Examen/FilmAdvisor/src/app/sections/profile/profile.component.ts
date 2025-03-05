@@ -15,16 +15,30 @@ export class ProfileComponent {
   getusuarios() {
     return this.dataService.getusuarios();
   }
-  usuarioSeleccionado(value: any) {
+  usuarioSeleccionado(value: string) {
     const usuarioseleccionado = this.getusuarios().find(usuario => usuario.id == value);
-    if{(usuarioseleccionado) {
+    if(usuarioseleccionado) {
       this.dataService.setusrecomendado(usuarioseleccionado);
     }
     else{
       this.dataService.setusrecomendado({id: 0 , name: "No se ha seleccionado un usuario"});
     }
     }
+
+  getRecomendacionToUser() {
+    return this.dataService.getRecomendacionToUser();
   }
+  getRecomendacionFromUser() {
+    return this.dataService.getRecomendacionFromUser();
+  }
+
+
+
+
+
+
+
 }
+
 
 
