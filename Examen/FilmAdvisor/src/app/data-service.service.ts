@@ -15,6 +15,7 @@ export class DataServiceService {
   private peliculas: any[] = [];
   private pelicula: any;
   private datos: any[] = [];
+  private usrecomendado: any = {id: 0 , name: "No se ha seleccionado un usuario"};
 
   //lista de usuarios
   getUsuariosdeApi() {
@@ -43,6 +44,14 @@ export class DataServiceService {
   }
   setPelicula(pelicula: any) {
     this.pelicula = pelicula;
+  }
+
+  //mostrar las recomendaciones
+  getusrecomendado(){
+    return this.usrecomendado;
+  }
+  setusrecomendado(usuario: any){
+    this.usrecomendado = usuario;
   }
 
   //localstorage

@@ -16,7 +16,9 @@
   </div>
   <div class="col-lg-6">
       <blockquote class="blockquote">
-          You are logged in as... <i class="text-success"><!-- AQUI CODIGO ANGULAR --></i>. Select target user:
+          You are logged in as... <i class="text-success"><!-- AQUI CODIGO ANGULAR -->
+            {{getusrecomendado().name}}
+          </i>. Select target user:
       </blockquote>
       <div class="input-group mb-3">
           <select class="form-select" aria-label="Default select example">

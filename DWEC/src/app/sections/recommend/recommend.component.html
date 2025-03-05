@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="col-lg-4">
+        <div class="input-group mb-3">
+            <input #search (keyup.enter)="getDatosPeliculas(search.value)"type="text" class="form-control" placeholder="search movies by title..."
+                    aria-label="search movies by title" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button (click)="getDatosPeliculas(search.value)"class="btn btn-warning" type="button">
+                    Search
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-2">
+        @if(getPelicula()) {
+	<app-card-pelicula [pelicula]="getPelicula()"></app-card-pelicula>
+        }
+        @else {
+            <div class="card text-center bg-light mb-2 mr-2">
+                <div class="card-body">
+                    <h5 class="card-title">No hay Pelicula Seleccionada</h5>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-lg-6">
+        <blockquote class="blockquote">
+                You are logged in as... <i class="text-success">{{getUsuarioRecomendante().name}}</i>. 
+                You are going to send a recommendation to <i class="text-success">{{getUsuarioRecomendado().name}}</i>.
+        </blockquote>
+        <div class="input-group mb-3">
+            <select #select2 class="form-select" aria-label="Default select example" (change)="onUsuarioSelect(select2.value)">
+                <option value="">Select a user</option>
+                @for (user of getUsuarios(); track $index) {
+                    <option value="{{user.id}}">{{user.name}}</option>
+                }
+            </select>
+            <div class="input-group-append">
+                @if( (getUsuarioRecomendado().id >= 1) && getPelicula() && (getUsuarioRecomendante().id >= 1) ) {
+                    <button class="btn btn-warning" (click)="addRecomendacion()">RECOMMEND!</button>
+                }
+                @else{
+                <button disabled class="btn btn-warning" >RECOMMEND!</button>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <h3>Search results</h3>
+    <div class="row row-cols-md-5">
+        @for (pelicula of getPeliculas(); track $index) {
+            <app-card-pelicula (click)="setPelicula(pelicula)"[pelicula] = "pelicula"></app-card-pelicula>
+        }
+    </div>
+</div>
