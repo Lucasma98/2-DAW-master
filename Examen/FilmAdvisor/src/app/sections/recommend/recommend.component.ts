@@ -24,4 +24,12 @@ export class RecommendComponent {
     getdatosjson() {
       return this.dataService.getdatosjson();
     }
+
+    getPelicula(){
+      return this.dataService.getPelicula()
+   }
+    setPelicula(pelicula: any) {
+      this.dataService.setPelicula(pelicula);
+    }
+
 }

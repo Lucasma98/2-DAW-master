@@ -8,10 +8,13 @@ export class DataServiceService {
 
   constructor(private api: ApiService) {
     this.getUsuariosdeApi();
+    this.datos = JSON.parse(localStorage.getItem('datos') || '[]')
   }
 
   private usuarios: any[] = [];
   private peliculas: any[] = [];
+  private pelicula: any;
+  private datos: any[] = [];
 
   //lista de usuarios
   getUsuariosdeApi() {
@@ -34,5 +37,18 @@ export class DataServiceService {
     return this.peliculas;
   }
 
+  //clicar en pelicula
+  getPelicula(){
+    return this.pelicula
+  }
+  setPelicula(pelicula: any) {
+    this.pelicula = pelicula;
+  }
+
+  //localstorage
+  getdatos() {
+    return this.datos;
+  }
 
 }
+

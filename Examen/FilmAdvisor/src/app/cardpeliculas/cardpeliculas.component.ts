@@ -11,4 +11,5 @@ export class CardpeliculasComponent {
   constructor(private dataservice : DataServiceService) { }
 
   @Input() peliculas: any
+
 }
