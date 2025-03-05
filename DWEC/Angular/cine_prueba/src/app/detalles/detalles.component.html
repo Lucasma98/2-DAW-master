@@ -1,0 +1,11 @@
+<h2>{{ pelicula.title }}</h2>
+<p><strong>Año:</strong> {{ pelicula.year }}</p>
+<p><strong>Duración:</strong> {{ pelicula.runtime }}</p>
+<p><strong>Géneros:</strong> {{ pelicula.genre }}</p>
+<p><strong>Dirección:</strong> {{ pelicula.director }}</p>
+<p><strong>Reparto:</strong> {{ pelicula.actors }}</p>
+<p><strong>Sinopsis:</strong> {{ pelicula.plot }}</p>
+<p><strong>País:</strong> {{ pelicula.country }}</p>
+<p><strong>Puntuación de IMDb:</strong> {{ pelicula.imdbRating }}</p>
+<a [href]="'https://www.imdb.com/title/' + pelicula.imdbID" target="_blank">Enlace a IMDb</a>
+<button (click)="volver()">Volver a Favoritos</button>

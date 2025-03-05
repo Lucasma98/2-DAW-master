@@ -1,0 +1,209 @@
+******************************************************************************************
+URLS
+	Lista de usuarios:
+		https://jsonplaceholder.typicode.com/users
+
+	Búsqueda de películas por nombre:
+		https://omdbapi.com/?apikey=xxxxxx&s=aaaaaaa
+
+	Búsqueda de 1 película por ID:
+		https://omdbapi.com/?apikey=xxxxxx&i=yyyyyyy
+
+
+******************************************************************************************
+COMPONENTE RAIZ
+
+<main class="container">
+   y aqui el encabezado, la barra de navegación, el router-outlet y el footer
+</main>
+
+******************************************************************************************
+HEADER
+
+	div.row { background-color: rgb(179, 156, 133); }
+
+<div class="row">
+    <div class="col-lg-12" id="logo"><img src=""></div>
+</div>
+
+******************************************************************************************
+BARRA NAVEGACION
+
+      div,nav {
+        background-color: rgb(222, 213, 203);
+      }
+      .container-fluid {
+        margin-left: 1cm;
+      }
+
+<div class="row">
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand">Film advisor</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page">Home</a>
+          <a class="nav-link">Profile</a>
+          <a class="nav-link">Recommend!</a>
+        </div>
+      </div>
+    </div>
+</nav>
+</div>
+
+******************************************************************************************
+FOOTER
+
+      div.row {
+        background-color: rgb(222, 213, 203);
+        margin-top: 1cm;
+      }
+
+<div class="row" id="pie">
+    <div class="col-lg-6">
+        <h3>Author: <!-- PON TU NOMBRE AQUÍ --></h3>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
+          <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+        </a>
+        <br />
+          This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+    </div>
+    <div class="col-lg-6">
+        <h3>Films' data extracted from omdbapi.com</h3>
+        <a href="https://www.omdbapi.com" target="_blank">Visit omdbapi.com</a>
+    </div>
+</div>
+
+******************************************************************************************
+SECCION HOME
+
+<h1> ___</h1>
+<h3>Welcome to Film advisor!</h3>
+<blockquote class="blockquote">This is a film advisor webapp, where you can recommend movies to your friends.</blockquote> 
+<blockquote class="blockquote">You can also find information about the movies you like, such as their genre, rating, and release date.</blockquote>
+<blockquote class="blockquote">If you have any questions or need help, feel free to contact us at <a href="mailto:luismiguel.fernandez@murciaeduca.com">mail</a>.</blockquote>
+
+******************************************************************************************
+SECCION PROFILES
+
+	div.row { margin-top: 1cm;}
+
+<div class="row">
+    <div class="col-lg-3">
+        <h5 align="right">User name</h5>
+    </div> 
+    <div class="col-lg-6">
+        <select class="form-select" aria-label="Default select example">
+            <option value="">Select user name</option>
+            <!-- AQUI CODIGO ANGULAR -->
+        </select>
+    </div>
+    <div class="col-lg-3"></div>
+</div>
+
+<div class="row">
+    <div class="col-lg-2">
+        <h5 align="right">Someone recommended you these films...</h5>
+    </div> 
+    <div class="col-lg-9">
+        <table class="table table-striped" aria-labelledby="dataTable">
+            <thead>
+                <tr>
+                    <th scope="col">Movie</th>
+                    <th scope="col">Genre</th>
+                    <th scope="col">Year</th>
+                    <th scope="col">Rating</th>
+                    <th scope="col">Recommended by</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+		<!-- AQUI CODIGO ANGULAR -->
+            </tbody>
+        </table>
+    </div>
+    <div class="col-lg-1"></div>
+</div>
+
+<div class="row">
+    <div class="col-lg-2">
+        <h5 align="right">You recommended these films...</h5>
+    </div> 
+    <div class="col-lg-9">
+        <table class="table table-striped" aria-labelledby="dataTable">
+            <thead>
+                <tr>
+                    <th scope="col">Movie</th>
+                    <th scope="col">Genre</th>
+                    <th scope="col">Year</th>
+                    <th scope="col">Rating</th>
+                    <th scope="col">Recommended to</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+		<!-- AQUI CODIGO ANGULAR -->
+            </tbody>
+        </table>
+    </div>
+    <div class="col-lg-1"></div>
+</div>
+
+******************************************************************************************
+SECCION RECOMMEND
+
+	div.row { margin-top: 0.5cm; }
+
+<div class="row">
+    <div class="col-lg-4">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="search movies by title..."
+                    aria-label="search movies by title" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-warning" type="button">
+                    Search
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-2">
+	<!-- AQUI CODIGO ANGULAR -->
+    </div>
+    <div class="col-lg-6">
+        <blockquote class="blockquote">
+            You are logged in as... <i class="text-success"><!-- AQUI CODIGO ANGULAR --></i>. Select target user:
+        </blockquote>
+        <div class="input-group mb-3">
+            <select class="form-select" aria-label="Default select example">
+                <option value="">Select a user</option>
+		<!-- AQUI CODIGO ANGULAR -->
+            </select>
+            <div class="input-group-append">
+                <button class="btn btn-warning">RECOMMEND!</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <h3>Search results</h3>
+    <div class="row row-cols-md-5">
+        <!-- AQUI CODIGO ANGULAR -->
+    </div>
+</div>
+
+******************************************************************************************
+TARJETA PARA PELICULAS
+
+<div class="card text-center bg-light mb-2 mr-2">
+    <div class="card-body">
+        <img src="" class="card-img-top" alt="">
+        <h5 class="card-title"></h5>
+        <p class="card-text"></p>
+    </div>
+</div>
+
+******************************************************************************************

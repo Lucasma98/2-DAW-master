@@ -1,0 +1,64 @@
+<div class="row">
+
+    <div class="col-lg-3">
+        <h5 align="right">User name</h5>
+    </div>
+    <div class="col-lg-6">
+        <select class="form-select" aria-label="Default select example">
+            <option value="">Select user name</option>
+            <!-- AQUI CODIGO ANGULAR -->
+             @for (usuarios of getusuarios(); track $index) {
+                <option value="{{usuarios.id}}">{{usuarios.name}}</option>
+             }
+        </select>
+    </div>
+    <div class="col-lg-3"></div>
+</div>
+
+<div class="row">
+    <div class="col-lg-2">
+        <h5 align="right">Someone recommended you these films...</h5>
+    </div>
+    <div class="col-lg-9">
+        <table class="table table-striped" aria-labelledby="dataTable">
+            <thead>
+                <tr>
+                    <th scope="col">Movie</th>
+                    <th scope="col">Genre</th>
+                    <th scope="col">Year</th>
+                    <th scope="col">Rating</th>
+                    <th scope="col">Recommended by</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+		<!-- AQUI CODIGO ANGULAR -->
+            </tbody>
+        </table>
+    </div>
+    <div class="col-lg-1"></div>
+</div>
+
+<div class="row">
+    <div class="col-lg-2">
+        <h5 align="right">You recommended these films...</h5>
+    </div>
+    <div class="col-lg-9">
+        <table class="table table-striped" aria-labelledby="dataTable">
+            <thead>
+                <tr>
+                    <th scope="col">Movie</th>
+                    <th scope="col">Genre</th>
+                    <th scope="col">Year</th>
+                    <th scope="col">Rating</th>
+                    <th scope="col">Recommended to</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+		<!-- AQUI CODIGO ANGULAR -->
+            </tbody>
+        </table>
+    </div>
+    <div class="col-lg-1"></div>
+</div>
