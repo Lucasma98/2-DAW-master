@@ -49,6 +49,8 @@ export class DataServiceService {
   getdatos() {
     return this.datos;
   }
-
+  saveAll(){
+    localStorage.setItem('datos', JSON.stringify(this.datos))
+  }
 }
 
