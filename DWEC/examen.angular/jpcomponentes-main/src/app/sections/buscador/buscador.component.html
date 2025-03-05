@@ -1,0 +1,58 @@
+<h3>Buscar</h3>
+
+<div class="row">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="categoriesNav">
+            <ul class="navbar-nav">
+                @for (categoria of categorias; track $index) {
+                <li class="nav-item">
+                    <button (click)="setCat(categoria.id)" class="nav-link">{{categoria.nombre}}</button>
+                </li>
+                }
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="row">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="manufacturersNav">
+            <ul class="navbar-nav">
+                @for (fabricante of fabricantes; track $index) {
+                <li class="nav-item">
+                    <button (click)="setFab(fabricante.id)" class="nav-link">{{fabricante.nombre}}</button>
+                </li>
+                }
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="row">
+    <div class="input-group mb-3">
+        <input #patron (keyup)="setPatron(patron.value)" type="text" class="form-control"
+            placeholder="Buscar por nombre" aria-label="Buscar por nombre" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="button">Buscar</button>
+        </div>
+    </div>
+</div>
+
+<ng-container>
+    <div class="row">
+        <h5>Resultados de búsqueda</h5>
+    </div>
+    <div class="row">
+        <div class="row row-cols-md-5">
+            @for(resultado of resultados; track $index) {
+            <app-articulo [datos]="resultado" />
+            } @empty {
+            @if (patron.value !== "") {
+            <div class="alert alert-warning" role="alert">
+                No se encontraron resultados para la búsqueda "{{patron.value}}"
+            </div>
+            }
+            }
+        </div>
+    </div>
+</ng-container>

@@ -1,0 +1,18 @@
+<li class="list-group-item">
+    <div class="row row-cols-md-4">
+      <div>
+          <h5>"{{song.title}}"</h5>
+      </div>
+      <div>{{ artista.name }}</div>
+      <div>{{song.length | duracion }} min</div>
+      <div>
+        @if (isAlredyInPlaylist()) {
+          <button (click) = "RemoveFromPlaylist()" type="button" class="btn btn-outline-danger">Remove from playlist</button>
+        }
+        @else {
+          <button (click) = "AddToPlaylist()" type="button" class="btn btn-outline-success">Add to playlist</button>
+        }
+      
+      </div>
+    </div>
+  </li>

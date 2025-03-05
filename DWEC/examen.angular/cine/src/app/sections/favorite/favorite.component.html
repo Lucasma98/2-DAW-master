@@ -1,0 +1,13 @@
+<div class="card text-center col-lg-3 col-md-4 col-sm-6 col-12">
+    @for (pelis of getFavoritos(); track $index) {
+    <a>
+        <img src="{{pelis.Poster}}" class="card-img-top">
+    </a>
+    <div class="card-body"> 
+        <p class="card-text" >{{pelis.Titulo}} {{pelis.Year}}</p>
+        <button type="button" class="btn btn-primary" [routerLink]="['/details',pelis.imdbID]" routerLinkActive="fw-bold">Detalles</button>
+        <button type="button" class="btn btn-danger" (click)="borrarFavoritos(pelis)">Borrar</button>
+    </div>
+    }
+</div>
+

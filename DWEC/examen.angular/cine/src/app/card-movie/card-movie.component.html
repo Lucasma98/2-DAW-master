@@ -1,0 +1,19 @@
+<div class="card mt-4 mx-auto" style="max-width: 400px;" >
+    <img [src]="movie.Poster" class="card-img-top img-fluid" alt="{{ movie.Title }}"
+      style="height: 500px; object-fit: cover; ">
+    <div class="card-body text-center">
+      <h5 class="card-title">{{ movie.Title }}</h5>
+      <p class="card-text">{{ movie.Year }}</p>
+      @if (!isAlreadyFavorito(movie)) {
+        <button class="btn btn-warning mt-2" (click)="addfavoritos(movie)">
+          ⭐ Añadir a favoritos
+        </button>
+      }
+        @else {
+        <button class="btn btn-danger mt-2">
+          Ya esta en favoritos
+        </button>
+        }
+     
+    </div>
+</div>

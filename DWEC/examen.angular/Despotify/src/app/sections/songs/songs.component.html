@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="input-group mb-3">
+        <input (keyup) = "UpdatePattern(pattern.value)" #pattern type="text" class="form-control" placeholder="search by title or artist..."
+            aria-label="search by title or artist" aria-describedby="basic-addon2">
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-3">
+        <h3>Songs</h3>
+    </div>
+    <div class="col-lg-9 form-switch form-check-reverse">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" 
+            [(ngModel)]="CardView">
+        <label class="form-check-label" for="flexSwitchCheckChecked">
+            Toggle card/rows views
+        </label>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Mostrar vista de tarjetas si CardView es verdadero -->
+    @if (CardView) {
+        <div class="row row-cols-md-5">
+            @for (song of getSongsByPattern(); track $index ){
+                <app-song-card [song] = "song" [artista] = "getArtistById(song.artist)"></app-song-card>
+              }
+        </div>
+    } @else {
+        <ul class="list-group">
+            @for (song of getSongsByPattern(); track $index ){
+                <app-song-row [song] = "song" [artista] = "getArtistById(song.artist)"></app-song-row>
+              }
+        </ul>
+    }
+</div>

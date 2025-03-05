@@ -1,0 +1,14 @@
+<div class="card text-center bg-light mb-2 mr-2">
+    <a>
+        <img src="{{datos.imagen}}" style="width: 200px;" class="card-img-top">
+    </a>
+    <div class="card-body">
+        <h5 class="card-title">{{datos.nombre}}</h5>
+        <p class="card-text">{{datos.precio}}</p>
+        @if(datos.stock) {
+        <button (click)="addToCarrito(datos)" class="btn btn-success">Añadir al carrito</button>
+        } @else {
+        <button disabled="true" class="btn btn-secondary">No disponible</button>
+        }
+    </div>
+</div>

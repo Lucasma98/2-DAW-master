@@ -1,0 +1,15 @@
+<h3>Some statistics about our database:</h3>
+<ul class="list-group">
+  <li class="list-group-item">Number of songs: {{CountTotalSongs()}} </li>
+  <li class="list-group-item">Number of playlists: {{CountTotalPlaylists()}} </li>
+  <li class="list-group-item">Average number of songs in playlists: {{GetAverageSongsInPlaylists()}} </li>
+  <li class="list-group-item">Number of artists: {{CountTotalArtists()}} </li>
+  <li class="list-group-item">Top song by length: {{GetTopSongByLength()}} </li>
+  <li class="list-group-item">Top artist by songs: {{GetTopArtistBySongs()[0].name}} </li>
+</ul>
+<h5>Artists ordered by number of songs</h5>
+<ul class="list-group">
+  @for( artist of GetTopArtistBySongs(); track $index  ) {
+    <li class="list-group-item">{{artist.name}} ({{GetTotalSongsByArtist(artist.id)}})</li>
+  }
+</ul> 

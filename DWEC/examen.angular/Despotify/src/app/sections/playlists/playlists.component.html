@@ -1,0 +1,9 @@
+<h3>Playlists:</h3>
+<ul class="list-group">
+    @for (playlist of getPlaylists(); track $index) {
+
+        <app-playlist-block [playlist]="playlist"></app-playlist-block>
+
+    }
+   
+</ul>

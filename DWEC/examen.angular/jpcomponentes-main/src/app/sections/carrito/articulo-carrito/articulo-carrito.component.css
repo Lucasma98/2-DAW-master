@@ -1,0 +1,9 @@
+img.img-thumbnail {
+    width: 100px;
+}
+
+input.form-control {
+    display: inline;
+    margin: 2px;
+    width: 20%;
+}

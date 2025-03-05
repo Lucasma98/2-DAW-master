@@ -1,0 +1,8 @@
+<li class="list-group-item">
+    <h5>Playlist: {{playlist.name}}</h5>
+    <h6>Author: {{playlist.author}}</h6>
+    <h6>Songs: @for (song of playlist.songs; track $index) {
+       {{song}}
+    }
+    </h6>
+  </li>

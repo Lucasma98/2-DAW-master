@@ -1,0 +1,13 @@
+<div class="card text-center bg-light mb-2 mr-2">
+    <div class="card-body">
+        <h5 class="card-title">"{{song.title}}"</h5>
+        <span>{{artista.name}}</span>
+        <p class="card-text">{{song.length | duracion }} min</p> 
+        @if (isAlredyInPlaylist()) {
+            <button (click) = "RemoveFromPlaylist()" type="button" class="btn btn-outline-danger">Remove from playlist</button>
+          }
+          @else {
+            <button (click) = "AddToPlaylist()" type="button" class="btn btn-outline-success">Add to playlist</button>
+          }
+    </div>
+  </div>

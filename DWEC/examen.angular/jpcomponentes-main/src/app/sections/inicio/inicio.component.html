@@ -1,0 +1,3 @@
+@for (articulo of getArticulos().reverse().slice(0, 3); track $index) {
+<app-articulo [datos]="articulo" />
+}
