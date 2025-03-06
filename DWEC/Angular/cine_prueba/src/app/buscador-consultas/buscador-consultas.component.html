@@ -1,0 +1,8 @@
+<input [(ngModel)]="query" placeholder="Buscar película...">
+<button (click)="buscar()">Buscar</button>
+<div *ngIf="resultados.length > 0">
+  <div *ngFor="let pelicula of resultados">
+    <h3>{{ pelicula.title }} ({{ pelicula.year }})</h3>
+    <button (click)="añadirFavorito(pelicula)">Añadir a Favoritos</button>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="grid">
+  <app-favorito
+    *ngFor="let pelicula of favoritos"
+    [pelicula]="pelicula"
+    (borrarClick)="borrarFavorito($event)"
+    (detallesClick)="verDetalles($event)">
+  </app-favorito>
+</div>
+
