@@ -1,0 +1,10 @@
+
+{% extends 'default.html.twig' %}
+
+{% block contenido %}
+    <h1>Nueva Cita</h1>
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        
+    {{ form_end(form) }}
+{% endblock %}
